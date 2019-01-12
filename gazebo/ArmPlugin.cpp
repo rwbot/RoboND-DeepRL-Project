@@ -171,10 +171,16 @@ bool ArmPlugin::createAgent()
 
 	/*
 	/ TODO - Create DQN Agent
-	/
+
+    dqnAgent* dqnAgent::Create(
+        uint32_t width, uint32_t height, uint32_t channels, uint32_t numActions,
+        const char* optimizer, float learning_rate, uint32_t replay_mem, uint32_t batch_size,
+        float gamma, float epsilon_start,  float epsilon_end,  float epsilon_decay,
+        bool use_lstm, int lstm_size, bool allow_random, bool debug_mode)
+
 	*/
 
-	agent = NULL;
+	agent = dqnAgent::Create(INPUT_WIDTH, INPUT_HEIGHT, INPUT_CHANNELS , DOF*2, OPTIMIZER, LEARNING_RATE, REPLAY_MEMORY, BATCH_SIZE, GAMMA, EPS_START, EPS_END, EPS_DECAY, USE_LSTM, LSTM_SIZE, ALLOW_RANDOM, DEBUG_DQN);
 
 	if( !agent )
 	{
