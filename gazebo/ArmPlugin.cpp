@@ -63,7 +63,7 @@
 #define ANIMATION_STEPS 1000
 
 // Set Debug Mode
-#define DEBUG true
+#define DEBUG false
 
 // Lock base rotation DOF (Add dof in header file if off)
 #define LOCKBASE true
