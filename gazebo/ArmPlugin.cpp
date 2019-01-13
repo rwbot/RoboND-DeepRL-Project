@@ -267,6 +267,7 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
         bool collisionFilterCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_FILTER) == 0 );
 		if(collisionFilterCheck)
 			continue;
+
 		if(DEBUG){std::cout << "Collision between[" << contacts->contact(i).collision1()
 			     << "] and [" << contacts->contact(i).collision2() << "]\n";}
 //#############################################################################
@@ -277,12 +278,18 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 
 		if (collisionItemCheck)
 		{
+			// if(DEBUG){printf("ARM CONTACT ");}
+			printf("ARM CONTACT ");
 			// Reward for any part of arm touching the object
 			rewardHistory = REWARD_WIN;
             bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
             // rewardHistory += collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
 			if (collisionPointCheck)
+			{
 				rewardHistory += rewardHistory * 5.0f;
+				// if(DEBUG){printf("+ GRIPPER CONTACT\n");}
+				printf("+ GRIPPER CONTACT\n");
+			}
 
 			newReward  = true;
 			endEpisode = true;
@@ -616,7 +623,6 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta  = (avgGoalDelta * ALPHA) + (distDelta * (1.0f - ALPHA));
                 // if(DEBUG){printf("distDelta: %f avgGoalDelta: %f\n", distDelta, avgGoalDelta);}
-                printf("distDelta: %f avgGoalDelta: %f  ", distDelta, avgGoalDelta);
                 if(avgGoalDelta > 0){
 				rewardHistory = REWARD_INTERIM * avgGoalDelta;
                 } else {

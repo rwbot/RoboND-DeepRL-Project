@@ -4,7 +4,7 @@
 # Manually source this file using:
 #		sudo -s source /home/workspace/RoboND-DeepRL-Project/udasetup.sh
 
-#alias apm="sudo apt-get install libignition-math2-dev"
+alias apm="sudo apt-get install libignition-math2-dev"
 
 alias gitcon="git config --global credential.helper 'cache --timeout=999999'; git config --global user.name 'rwbot'; git config --global user.email 'rwbotx@gmail.com'"
 
