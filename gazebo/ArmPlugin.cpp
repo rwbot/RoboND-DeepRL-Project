@@ -514,7 +514,6 @@ static float BoxDistance(const math::Box& a, const math::Box& b)
 	return sqrtf(sqrDist);
 }
 
-
 // called by the world update start event
 void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 {
@@ -581,50 +580,45 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 
 		// get the bounding box for the gripper
 		const math::Box& gripBBox = gripper->GetBoundingBox();
+        // threshold for z value indicacting ground contact
 		const float groundContact = 0.05f;
-
+//#############################################################################
 		/*
 		/ TODO - set appropriate Reward for robot hitting the ground.
-		/
 		*/
+        bool checkGroundContact = (gripBBox.min.z <= groundContact);
 
-
-		/*if(checkGroundContact)
+		if(checkGroundContact)
 		{
-
 			if(DEBUG){printf("GROUND CONTACT, EOE\n");}
-
-			rewardHistory = None;
-			newReward     = None;
-			endEpisode    = None;
+			rewardHistory = REWARD_LOSS;
+			newReward     = true;
+			endEpisode    = true;
 		}
-		*/
 
 		/*
 		/ TODO - Issue an interim reward based on the distance to the object
-		/
 		*/
-
-		/*
 		if(!checkGroundContact)
 		{
-			const float distGoal = 0; // compute the reward from distance to the goal
+			float distGoal = BoxDistance(gripBBox,propBBox); // compute the reward from distance to the goal
 
 			if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
 
-
 			if( episodeFrames > 1 )
 			{
-				const float distDelta  = lastGoalDistance - distGoal;
-
+				float distDelta  = lastGoalDistance - distGoal;
 				// compute the smoothed moving average of the delta of the distance to the goal
-				avgGoalDelta  = 0.0;
-				rewardHistory = None;
-				newReward     = None;
+				avgGoalDelta  = (avgGoalDelta * ALPHA) + (distDelta * (1.0f - ALPHA));
+                if(DEBUG){printf("distDelta: %f avgGoalDelta: %f\n", distDelta, avgGoalDelta);}
+				rewardHistory = REWARD_INTERIM * avgGoalDelta;
+				newReward     = true;
+//#############################################################################
 			}
 
 			lastGoalDistance = distGoal;
-		} */
+		}
+
 	}
 
 	// issue rewards and train DQN
