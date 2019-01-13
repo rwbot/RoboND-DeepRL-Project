@@ -38,7 +38,7 @@
 #define OPTIMIZER "Adam"
 #define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
-#define BATCH_SIZE 8
+#define BATCH_SIZE 64
 #define USE_LSTM true
 #define LSTM_SIZE 32
 
@@ -63,7 +63,7 @@
 #define ANIMATION_STEPS 1000
 
 // Set Debug Mode
-#define DEBUG false
+#define DEBUG true
 
 // Lock base rotation DOF (Add dof in header file if off)
 #define LOCKBASE true
@@ -248,7 +248,7 @@ void ArmPlugin::onCameraMsg(ConstImageStampedPtr &_msg)
 	memcpy(inputBuffer[0], _msg->image().data().c_str(), inputBufferSize);
 	newState = true;
 
-	if(DEBUG){printf("camera %i x %i  %i bpp  %i bytes\n", width, height, bpp, size);}
+	// if(DEBUG){printf("camera %i x %i  %i bpp  %i bytes\n", width, height, bpp, size);}
 
 }
 
@@ -256,7 +256,7 @@ void ArmPlugin::onCameraMsg(ConstImageStampedPtr &_msg)
 // onCollisionMsg
 void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 {
-	//if(DEBUG){printf("collision callback (%u contacts)\n", contacts->contact_size());}
+	// if(DEBUG){printf("collision callback (%u contacts)\n", contacts->contact_size());}
 
 	if( testAnimation )
 		return;
@@ -279,7 +279,7 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		if (collisionItemCheck)
 		{
 			// if(DEBUG){printf("ARM CONTACT ");}
-			printf("ARM CONTACT ");
+			printf("ARM CONTACT/n");
 			// Reward for any part of arm touching the object
 			rewardHistory = REWARD_WIN;
             bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
@@ -330,7 +330,7 @@ bool ArmPlugin::updateAgent()
 		return false;
 	}
 
-	if(DEBUG){printf("ArmPlugin - agent selected action %i\n", action);}
+	// if(DEBUG){printf("ArmPlugin - agent selected action %i\n", action);}
 
 //#############################################################################
     // Evaluating if action is even or odd
@@ -464,7 +464,7 @@ bool ArmPlugin::updateJoints()
 		// update the AI agent when new camera frame is ready
 		episodeFrames++;
 
-		if(DEBUG){printf("episode frame = %i\n", episodeFrames);}
+		// if(DEBUG){printf("episode frame = %i\n", episodeFrames);}
 
 		// reset camera ready flag
 		newState = false;
@@ -615,7 +615,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		{
 			const float distGoal = BoxDistance(gripBBox,propBBox); // compute the reward from distance to the goal
 
-			if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
+			// if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
 
 			if( episodeFrames > 1 )
 			{
@@ -629,7 +629,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
                 rewardHistory = -1.0f * REWARD_LOSS * avgGoalDelta;
                 }
 				newReward     = true;
-                printf("INTERIM_REWARD: %f\n", rewardHistory);
+                // printf("INTERIM_REWARD: %f\n", rewardHistory);
 //#############################################################################
 			}
 
