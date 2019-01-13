@@ -26,28 +26,29 @@
 #define DEBUG_DQN false
 #define GAMMA 0.9f
 #define EPS_START 0.9f
-#define EPS_END 0.05f
+#define EPS_END 0.02f
 #define EPS_DECAY 200
 
 /*
 / TODO - Tune the following hyperparameters
 */
 
-#define INPUT_WIDTH   512
-#define INPUT_HEIGHT  512
-#define OPTIMIZER "None"
-#define LEARNING_RATE 0.0f
+#define INPUT_WIDTH   256
+#define INPUT_HEIGHT  256
+#define OPTIMIZER "RMSprop"
+#define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
 #define BATCH_SIZE 8
-#define USE_LSTM false
+#define USE_LSTM true
 #define LSTM_SIZE 32
 
 /*
 / TODO - Define Reward Parameters
 */
-#define REWARD_WIN  0.0f
-#define REWARD_LOSS -0.0f
-#define REWARD_INTERIM 0.0f
+#define REWARD_WIN  15.0f
+#define REWARD_LOSS -15.0f
+#define REWARD_INTERIM 3.0f
+#define ALPHA 0.5f
 // Define Object Names
 #define WORLD_NAME "arm_world"
 #define PROP_NAME  "tube"
@@ -62,7 +63,7 @@
 #define ANIMATION_STEPS 1000
 
 // Set Debug Mode
-#define DEBUG false
+#define DEBUG true
 
 // Lock base rotation DOF (Add dof in header file if off)
 #define LOCKBASE true
