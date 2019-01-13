@@ -33,8 +33,8 @@
 / TODO - Tune the following hyperparameters
 */
 
-#define INPUT_WIDTH   256
-#define INPUT_HEIGHT  256
+#define INPUT_WIDTH   64
+#define INPUT_HEIGHT  64
 #define OPTIMIZER "Adam"
 #define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
