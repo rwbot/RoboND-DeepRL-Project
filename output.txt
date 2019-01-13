@@ -1,0 +1,183 @@
+
+configuring gazebo7 plugin paths
+previous GAZEBO_PLUGIN_PATH=
+script directory /home/workspace/RoboND-DeepRL-Project/build/x86_64/bin
+plugin path /home/workspace/RoboND-DeepRL-Project/build/x86_64/bin/../lib
+new GAZEBO_PLUGIN_PATH=/home/workspace/RoboND-DeepRL-Project/build/x86_64/bin/../lib:
+
+starting gazebo7 simulator
+[1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m172.17.0.2[0m[1;32m
+[0m[1;32m[0mArmPlugin::ArmPlugin()
+ArmPlugin::Load('arm')
+PropPlugin::Load('tube')
+[deepRL]  use_cuda:       True
+[deepRL]  use_lstm:       1
+[deepRL]  lstm_size:      32
+[deepRL]  input_width:    64
+[deepRL]  input_height:   64
+[deepRL]  input_channels: 3
+[deepRL]  num_actions:    6
+[deepRL]  optimizer:      Adam
+[deepRL]  learning rate:  0.1
+[deepRL]  replay_memory:  10000
+[deepRL]  batch_size:     64
+[deepRL]  gamma:          0.9
+[deepRL]  epsilon_start:  0.9
+[deepRL]  epsilon_end:    0.02
+[deepRL]  epsilon_decay:  200.0
+[deepRL]  allow_random:   1
+[deepRL]  debug_mode:     0
+[deepRL]  creating DQN model instance
+[deepRL]  DRQN::__init__()
+[deepRL]  LSTM (hx, cx) size = 32
+[deepRL]  DQN model instance created
+[deepRL]  DQN script done init
+[cuda]  cudaAllocMapped 49152 bytes, CPU 0x2049a0000 GPU 0x2049a0000
+[deepRL]  pyTorch THCState  0x10E77B80
+[cuda]  cudaAllocMapped 12288 bytes, CPU 0x204aa0000 GPU 0x204aa0000
+ArmPlugin - allocated camera img buffer 64x64  24 bpp  12288 bytes
+[deepRL]  nn.Conv2d() output size = 800
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.0000 (000 of 001)  (reward=-15.00 LOSS)
+ARM CONTACT
+ARM CONTACT
++ GRIPPER CONTACT
+Current Accuracy:  0.5000 (001 of 002)  (reward=+75.00 WIN)
+[1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m172.17.0.2[0m[1;32m
+[0m[1;32m[0mARM CONTACT
+Current Accuracy:  0.6667 (002 of 003)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5000 (002 of 004)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4000 (002 of 005)  (reward=-15.00 LOSS)
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.5000 (003 of 006)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5714 (004 of 007)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5000 (004 of 008)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4444 (004 of 009)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4000 (004 of 010)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.4545 (005 of 011)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5000 (006 of 012)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5385 (007 of 013)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5000 (007 of 014)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4667 (007 of 015)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.5000 (008 of 016)  (reward=+15.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.4706 (008 of 017)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.5000 (009 of 018)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5263 (010 of 019)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5500 (011 of 020)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5238 (011 of 021)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.5455 (012 of 022)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5217 (012 of 023)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.5417 (013 of 024)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5200 (013 of 025)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5000 (013 of 026)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4815 (013 of 027)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4643 (013 of 028)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4483 (013 of 029)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.4667 (014 of 030)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4516 (014 of 031)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4375 (014 of 032)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4242 (014 of 033)  (reward=-15.00 LOSS)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4118 (014 of 034)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.4286 (015 of 035)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.4444 (016 of 036)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4324 (016 of 037)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.4474 (017 of 038)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.4615 (018 of 039)  (reward=+15.00 WIN)
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.4750 (019 of 040)  (reward=+15.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.4634 (019 of 041)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.4762 (020 of 042)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.4651 (020 of 043)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.4773 (021 of 044)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.4889 (022 of 045)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5000 (023 of 046)  (reward=+15.00 WIN)
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.5106 (024 of 047)  (reward=+15.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.5000 (024 of 048)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.5102 (025 of 049)  (reward=+15.00 WIN)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.5000 (025 of 050)  (reward=-15.00 LOSS)
+ARM CONTACT
+Current Accuracy:  0.5098 (026 of 051)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5192 (027 of 052)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5283 (028 of 053)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5370 (029 of 054)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5455 (030 of 055)  (reward=+15.00 WIN)
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.5536 (031 of 056)  (reward=+15.00 WIN)
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.5614 (032 of 057)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5690 (033 of 058)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5763 (034 of 059)  (reward=+15.00 WIN)
+ARM CONTACT
+Current Accuracy:  0.5833 (035 of 060)  (reward=+15.00 WIN)
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.5902 (036 of 061)  (reward=+15.00 WIN)
+GROUND CONTACT, EOE
+Current Accuracy:  0.5806 (036 of 062)  (reward=-15.00 LOSS)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.5714 (036 of 063)  (reward=-15.00 LOSS)
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.5625 (036 of 064)  (reward=-15.00 LOSS)
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.5692 (037 of 065)  (reward=+15.00 WIN)

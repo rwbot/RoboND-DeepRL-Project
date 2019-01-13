@@ -268,8 +268,8 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		if(collisionFilterCheck)
 			continue;
 
-		if(DEBUG){std::cout << "Collision between[" << contacts->contact(i).collision1()
-			     << "] and [" << contacts->contact(i).collision2() << "]\n";}
+		// if(DEBUG){std::cout << "Collision between["  << contacts->contact(i).collision1()
+			     // << "] and [" << contacts->contact(i).collision2() << "]\n";}
 //#############################################################################
 		/*
 		/ TODO - Check if there is collision between the arm and object, then issue learning reward
@@ -279,14 +279,14 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		if (collisionItemCheck)
 		{
 			// if(DEBUG){printf("ARM CONTACT ");}
-			printf("ARM CONTACT/n");
+			printf("ARM CONTACT\n");
 			// Reward for any part of arm touching the object
 			rewardHistory = REWARD_WIN;
             bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
             // rewardHistory += collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
 			if (collisionPointCheck)
 			{
-				rewardHistory += rewardHistory * 5.0f;
+				rewardHistory = rewardHistory * 5.0f;
 				// if(DEBUG){printf("+ GRIPPER CONTACT\n");}
 				printf("+ GRIPPER CONTACT\n");
 			}
@@ -641,7 +641,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 	// issue rewards and train DQN
 	if( newReward && agent != NULL )
 	{
-		if(DEBUG){printf("ArmPlugin - issuing reward %f, EOE=%s  %s\n", rewardHistory, endEpisode ? "true" : "false", (rewardHistory > 0.1f) ? "POS+" :(rewardHistory > 0.0f) ? "POS" : (rewardHistory < 0.0f) ? "    NEG" : "       ZERO");}
+		// if(DEBUG){printf("ArmPlugin - issuing reward %f, EOE=%s  %s\n", rewardHistory, endEpisode ? "true" : "false", (rewardHistory > 0.1f) ? "POS+" :(rewardHistory > 0.0f) ? "POS" : (rewardHistory < 0.0f) ? "    NEG" : "       ZERO");}
 		agent->NextReward(rewardHistory, endEpisode);
 
 		// reset reward indicator
