@@ -277,9 +277,13 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 
 		if (collisionItemCheck)
 		{
+			// Reward for any part of arm touching the object
+			rewardHistory = REWARD_WIN;
             bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
+            // rewardHistory += collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
+			if (collisionPointCheck)
+				rewardHistory += rewardHistory * 5.0f;
 
-            rewardHistory = collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
 			newReward  = true;
 			endEpisode = true;
 			return;
