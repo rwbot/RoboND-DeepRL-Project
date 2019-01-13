@@ -21,7 +21,6 @@
 #define VELOCITY_MAX  0.2f
 
 // Define DQN API Settings
-
 #define INPUT_CHANNELS 3
 #define ALLOW_RANDOM true
 #define DEBUG_DQN false
@@ -46,10 +45,9 @@
 /*
 / TODO - Define Reward Parameters
 */
-
 #define REWARD_WIN  0.0f
 #define REWARD_LOSS -0.0f
-
+#define REWARD_INTERIM 0.0f
 // Define Object Names
 #define WORLD_NAME "arm_world"
 #define PROP_NAME  "tube"
@@ -130,7 +128,7 @@ void ArmPlugin::Load(physics::ModelPtr _parent, sdf::ElementPtr /*_sdf*/)
 
 	// Create our node for camera communication
 	cameraNode->Init();
-
+//#############################################################################
 	/*
 	/ TODO - Subscribe to camera topic
 gazebo::transport::SubscriberPtr sub = node->Subscribe("topic_name", callback_function, class_instance);
@@ -154,7 +152,7 @@ gazebo::transport::SubscriberPtr sub = node->Subscribe("topic_name", callback_fu
 	*/
 
 	collisionSub = collisionNode->Subscribe("/gazebo/arm_world/tube/tube_link/my_contact", &ArmPlugin::onCollisionMsg, this);
-
+//#############################################################################
 	// Listen to the update event. This event is broadcast every simulation iteration.
 	this->updateConnection = event::Events::ConnectWorldUpdateBegin(boost::bind(&ArmPlugin::OnUpdate, this, _1));
 }
@@ -166,7 +164,7 @@ bool ArmPlugin::createAgent()
 	if( agent != NULL )
 		return true;
 
-
+//#############################################################################
 	/*
 	/ TODO - Create DQN Agent
 
@@ -179,6 +177,8 @@ bool ArmPlugin::createAgent()
 	*/
 
 	agent = dqnAgent::Create(INPUT_WIDTH, INPUT_HEIGHT, INPUT_CHANNELS , DOF*2, OPTIMIZER, LEARNING_RATE, REPLAY_MEMORY, BATCH_SIZE, GAMMA, EPS_START, EPS_END, EPS_DECAY, USE_LSTM, LSTM_SIZE, ALLOW_RANDOM, DEBUG_DQN);
+
+//#############################################################################
 
 	if( !agent )
 	{
@@ -252,7 +252,7 @@ void ArmPlugin::onCameraMsg(ConstImageStampedPtr &_msg)
 }
 
 
-/ onCollisionMsg
+// onCollisionMsg
 void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 {
 	if(DEBUG){printf("collision callback (%u contacts)\n", contacts->contact_size());}
@@ -327,6 +327,7 @@ bool ArmPlugin::updateAgent()
 #if VELOCITY_CONTROL
 	// if the action is even, increase the joint position by the delta parameter
 	// if the action is odd,  decrease the joint position by the delta parameter
+
 	/*
 	/ TODO - Increase or decrease the joint velocity based on whether the action is even or odd
 	*/
@@ -511,6 +512,7 @@ static float BoxDistance(const math::Box& a, const math::Box& b)
 
 	return sqrtf(sqrDist);
 }
+
 
 // called by the world update start event
 void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
