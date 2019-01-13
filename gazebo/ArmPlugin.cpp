@@ -27,14 +27,14 @@
 #define GAMMA 0.9f
 #define EPS_START 0.9f
 #define EPS_END 0.02f
-#define EPS_DECAY 300
+#define EPS_DECAY 200
 
 /*
 / TODO - Tune the following hyperparameters
 */
 
-#define INPUT_WIDTH   64
-#define INPUT_HEIGHT  64
+#define INPUT_WIDTH   256
+#define INPUT_HEIGHT  256
 #define OPTIMIZER "RMSprop"
 #define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
@@ -323,7 +323,7 @@ bool ArmPlugin::updateAgent()
 
 //#############################################################################
     // Evaluating if action is even or odd
-    int actionSign = 1 - 2 * (action % 2);
+    const int actionSign = 1 - 2 * (action % 2);
 
 #if VELOCITY_CONTROL
 	// if the action is even, increase the joint position by the delta parameter
@@ -333,7 +333,7 @@ bool ArmPlugin::updateAgent()
 	/ TODO - Increase or decrease the joint velocity based on whether the action is even or odd
 	*/
     // TODO - Set joint velocity based on whether action is even or odd.
-	float velocity = vel[action/2] + actionSign * actionVelDelta;
+	const float velocity = vel[action/2] + actionSign * actionVelDelta;
 //#############################################################################
 	if( velocity < VELOCITY_MIN )
 		velocity = VELOCITY_MIN;
@@ -587,7 +587,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		/*
 		/ TODO - set appropriate Reward for robot hitting the ground.
 		*/
-        bool checkGroundContact = (gripBBox.min.z <= groundContact);
+        const bool checkGroundContact = (gripBBox.min.z <= groundContact);
 
 		if(checkGroundContact)
 		{
@@ -602,18 +602,24 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		*/
 		if(!checkGroundContact)
 		{
-			float distGoal = BoxDistance(gripBBox,propBBox); // compute the reward from distance to the goal
+			const float distGoal = BoxDistance(gripBBox,propBBox); // compute the reward from distance to the goal
 
 			if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
 
 			if( episodeFrames > 1 )
 			{
-				float distDelta  = lastGoalDistance - distGoal;
+				const float distDelta  = lastGoalDistance - distGoal;
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta  = (avgGoalDelta * ALPHA) + (distDelta * (1.0f - ALPHA));
-                if(DEBUG){printf("distDelta: %f avgGoalDelta: %f\n", distDelta, avgGoalDelta);}
+                // if(DEBUG){printf("distDelta: %f avgGoalDelta: %f\n", distDelta, avgGoalDelta);}
+                printf("distDelta: %f avgGoalDelta: %f  ", distDelta, avgGoalDelta);
+                if(avgGoalDelta > 0){
 				rewardHistory = REWARD_INTERIM * avgGoalDelta;
+                } else {
+                rewardHistory = -1.0f * REWARD_LOSS * avgGoalDelta;
+                }
 				newReward     = true;
+                printf("INTERIM_REWARD: %f\n", rewardHistory);
 //#############################################################################
 			}
 
