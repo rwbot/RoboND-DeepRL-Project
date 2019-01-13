@@ -27,14 +27,14 @@
 #define GAMMA 0.9f
 #define EPS_START 0.9f
 #define EPS_END 0.02f
-#define EPS_DECAY 200
+#define EPS_DECAY 300
 
 /*
 / TODO - Tune the following hyperparameters
 */
 
-#define INPUT_WIDTH   256
-#define INPUT_HEIGHT  256
+#define INPUT_WIDTH   64
+#define INPUT_HEIGHT  64
 #define OPTIMIZER "RMSprop"
 #define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
@@ -256,7 +256,7 @@ void ArmPlugin::onCameraMsg(ConstImageStampedPtr &_msg)
 // onCollisionMsg
 void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 {
-	if(DEBUG){printf("collision callback (%u contacts)\n", contacts->contact_size());}
+	//if(DEBUG){printf("collision callback (%u contacts)\n", contacts->contact_size());}
 
 	if( testAnimation )
 		return;
