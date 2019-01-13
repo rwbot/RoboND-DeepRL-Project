@@ -32,7 +32,6 @@
 
 /*
 / TODO - Tune the following hyperparameters
-/
 */
 
 #define INPUT_WIDTH   512
@@ -46,7 +45,6 @@
 
 /*
 / TODO - Define Reward Parameters
-/
 */
 
 #define REWARD_WIN  0.0f
@@ -324,20 +322,19 @@ bool ArmPlugin::updateAgent()
 
 	if(DEBUG){printf("ArmPlugin - agent selected action %i\n", action);}
 
-
+//#############################################################################
+    // Evaluating if action is even or odd
+    int actionSign = 1 - 2 * (action % 2);
 
 #if VELOCITY_CONTROL
 	// if the action is even, increase the joint position by the delta parameter
 	// if the action is odd,  decrease the joint position by the delta parameter
-
-
 	/*
 	/ TODO - Increase or decrease the joint velocity based on whether the action is even or odd
-	/
 	*/
-
-	float velocity = 0.0; // TODO - Set joint velocity based on whether action is even or odd.
-
+    // TODO - Set joint velocity based on whether action is even or odd.
+	float velocity = vel[action/2] + actionSign * actionVelDelta;
+//#############################################################################
 	if( velocity < VELOCITY_MIN )
 		velocity = VELOCITY_MIN;
 
@@ -361,14 +358,14 @@ bool ArmPlugin::updateAgent()
 			vel[n] = 0.0f;
 		}
 	}
-#else
-
+#else //  POSITION CONTROL
+//#############################################################################
 	/*
 	/ TODO - Increase or decrease the joint position based on whether the action is even or odd
-	/
 	*/
-	float joint = 0.0; // TODO - Set joint position based on whether action is even or odd.
-
+    // TODO - Set joint position based on whether action is even or odd.
+    float joint = ref[action/2] + actionSign * actionJointDelta;
+//#############################################################################
 	// limit the joint to the specified range
 	if( joint < JOINT_MIN )
 		joint = JOINT_MIN;
