@@ -25,7 +25,7 @@
 #define ALLOW_RANDOM true
 #define DEBUG_DQN false
 #define GAMMA 0.9f
-#define EPS_START 0.9f
+#define EPS_START 0.8f
 #define EPS_END 0.02f
 #define EPS_DECAY 200
 
@@ -36,19 +36,20 @@
 #define INPUT_WIDTH   64
 #define INPUT_HEIGHT  64
 #define OPTIMIZER "Adam"
-#define LEARNING_RATE 0.1f
+#define LEARNING_RATE 0.05f
 #define REPLAY_MEMORY 10000
-#define BATCH_SIZE 64
+#define BATCH_SIZE 128
 #define USE_LSTM true
-#define LSTM_SIZE 32
+#define LSTM_SIZE 128
 
 /*
 / TODO - Define Reward Parameters
 */
-#define REWARD_WIN  15.0f
-#define REWARD_LOSS -15.0f
-#define REWARD_INTERIM 3.0f
-#define ALPHA 0.5f
+#define REWARD_WIN  30.0f
+#define REWARD_LOSS -30.0f
+#define REWARD_INTERIM 5.0f
+#define INTERIM_BUFFER 0.3f
+#define ALPHA 0.4f
 // Define Object Names
 #define WORLD_NAME "arm_world"
 #define PROP_NAME  "tube"
@@ -615,21 +616,22 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		{
 			const float distGoal = BoxDistance(gripBBox,propBBox); // compute the reward from distance to the goal
 
-			// if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
+			if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
 
 			if( episodeFrames > 1 )
 			{
 				const float distDelta  = lastGoalDistance - distGoal;
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta  = (avgGoalDelta * ALPHA) + (distDelta * (1.0f - ALPHA));
-                // if(DEBUG){printf("distDelta: %f avgGoalDelta: %f\n", distDelta, avgGoalDelta);}
+                if(DEBUG){printf("distDelta: %f avgGoalDelta: %f\n", distDelta, avgGoalDelta);}
                 if(avgGoalDelta > 0){
-				rewardHistory = REWARD_INTERIM * avgGoalDelta;
+				// rewardHistory = REWARD_INTERIM * (1.0f - avgGoalDelta);
+				rewardHistory = REWARD_INTERIM * avgGoalDelta - INTERIM_BUFFER;
                 } else {
                 rewardHistory = -1.0f * REWARD_LOSS * avgGoalDelta;
                 }
 				newReward     = true;
-                // printf("INTERIM_REWARD: %f\n", rewardHistory);
+                printf("INTERIM_REWARD: %f\n", rewardHistory);
 //#############################################################################
 			}
 
