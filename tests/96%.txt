@@ -1,0 +1,1651 @@
+
+configuring gazebo7 plugin paths
+previous GAZEBO_PLUGIN_PATH=
+script directory /home/workspace/RoboND-DeepRL-Project/build/x86_64/bin
+plugin path /home/workspace/RoboND-DeepRL-Project/build/x86_64/bin/../lib
+new GAZEBO_PLUGIN_PATH=/home/workspace/RoboND-DeepRL-Project/build/x86_64/bin/../lib:
+
+starting gazebo7 simulator
+[1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m172.17.0.2[0m[1;32m
+[0m[1;32m[0mArmPlugin::ArmPlugin()
+ArmPlugin::Load('arm')
+PropPlugin::Load('tube')
+[deepRL]  use_cuda:       True
+[deepRL]  use_lstm:       1
+[deepRL]  lstm_size:      128
+[deepRL]  input_width:    64
+[deepRL]  input_height:   64
+[deepRL]  input_channels: 3
+[deepRL]  num_actions:    6
+[deepRL]  optimizer:      Adam
+[deepRL]  learning rate:  0.08
+[deepRL]  replay_memory:  10000
+[deepRL]  batch_size:     128
+[deepRL]  gamma:          0.9
+[deepRL]  epsilon_start:  0.4
+[deepRL]  epsilon_end:    0.02
+[deepRL]  epsilon_decay:  300.0
+[deepRL]  allow_random:   1
+[deepRL]  debug_mode:     0
+[deepRL]  creating DQN model instance
+[deepRL]  DRQN::__init__()
+[deepRL]  LSTM (hx, cx) size = 128
+[deepRL]  DQN model instance created
+[deepRL]  DQN script done init
+[cuda]  cudaAllocMapped 49152 bytes, CPU 0x2049a0000 GPU 0x2049a0000
+[deepRL]  pyTorch THCState  0xE86A0A20
+[cuda]  cudaAllocMapped 12288 bytes, CPU 0x204aa0000 GPU 0x204aa0000
+ArmPlugin - allocated camera img buffer 64x64  24 bpp  12288 bytes
+distDelta: -0.12453 avgGoalDelta: -0.07472 INTERIM_REWARD:  0.00000
+distDelta:  0.07168 avgGoalDelta:  0.01312 INTERIM_REWARD: -0.14752
+[deepRL]  nn.Conv2d() output size = 800
+distDelta: -0.11933 avgGoalDelta: -0.06635 INTERIM_REWARD: -0.14752
+distDelta:  0.00002 avgGoalDelta: -0.02653 INTERIM_REWARD: -0.14752
+distDelta: -0.06168 avgGoalDelta: -0.04762 INTERIM_REWARD: -0.14752
+distDelta:  0.00003 avgGoalDelta: -0.01903 INTERIM_REWARD: -0.14752
+distDelta:  0.00000 avgGoalDelta: -0.00761 INTERIM_REWARD: -0.14752
+distDelta: -0.05203 avgGoalDelta: -0.03426 INTERIM_REWARD: -0.14752
+distDelta:  0.05206 avgGoalDelta:  0.01753 INTERIM_REWARD: -0.12987
+distDelta: -0.09810 avgGoalDelta: -0.05185 INTERIM_REWARD: -0.12987
+distDelta:  0.05630 avgGoalDelta:  0.01304 INTERIM_REWARD: -0.14782
+distDelta: -0.00004 avgGoalDelta:  0.00519 INTERIM_REWARD: -0.17923
+distDelta:  0.06583 avgGoalDelta:  0.04158 INTERIM_REWARD: -0.03369
+distDelta: -0.00003 avgGoalDelta:  0.01661 INTERIM_REWARD: -0.13356
+distDelta:  0.08017 avgGoalDelta:  0.05474 INTERIM_REWARD:  0.01898
+distDelta:  0.09054 avgGoalDelta:  0.07622 INTERIM_REWARD:  0.10488
+distDelta:  0.12266 avgGoalDelta:  0.10408 INTERIM_REWARD:  0.21632
+distDelta:  0.09938 avgGoalDelta:  0.10126 INTERIM_REWARD:  0.20505
+distDelta:  0.10436 avgGoalDelta:  0.10312 INTERIM_REWARD:  0.21247
+distDelta:  0.10812 avgGoalDelta:  0.10612 INTERIM_REWARD:  0.22448
+distDelta:  0.11044 avgGoalDelta:  0.10871 INTERIM_REWARD:  0.23485
+distDelta:  0.00001 avgGoalDelta:  0.04349 INTERIM_REWARD: -0.02603
+distDelta: -0.11044 avgGoalDelta: -0.04886 INTERIM_REWARD: -0.02603
+distDelta:  0.11041 avgGoalDelta:  0.04670 INTERIM_REWARD: -0.01320
+distDelta: -0.11042 avgGoalDelta: -0.04757 INTERIM_REWARD: -0.01320
+distDelta:  0.11042 avgGoalDelta:  0.04722 INTERIM_REWARD: -0.01111
+distDelta:  0.11097 avgGoalDelta:  0.08547 INTERIM_REWARD:  0.14188
+distDelta:  0.10918 avgGoalDelta:  0.09969 INTERIM_REWARD:  0.19877
+distDelta:  0.10431 avgGoalDelta:  0.10246 INTERIM_REWARD:  0.20985
+distDelta:  0.09718 avgGoalDelta:  0.09929 INTERIM_REWARD:  0.19717
+distDelta:  0.06219 avgGoalDelta:  0.07703 INTERIM_REWARD:  0.10813
+distDelta: -0.09427 avgGoalDelta: -0.02575 INTERIM_REWARD:  0.10813
+distDelta: -0.09907 avgGoalDelta: -0.06975 INTERIM_REWARD:  0.10813
+distDelta:  0.09883 avgGoalDelta:  0.03140 INTERIM_REWARD: -0.07440
+distDelta:  0.09451 avgGoalDelta:  0.06926 INTERIM_REWARD:  0.07706
+distDelta: -0.09425 avgGoalDelta: -0.02885 INTERIM_REWARD:  0.07706
+distDelta: -0.09908 avgGoalDelta: -0.07098 INTERIM_REWARD:  0.07706
+distDelta: -0.10633 avgGoalDelta: -0.09219 INTERIM_REWARD:  0.07706
+distDelta: -0.11007 avgGoalDelta: -0.10292 INTERIM_REWARD:  0.07706
+distDelta:  0.11003 avgGoalDelta:  0.02485 INTERIM_REWARD: -0.10060
+distDelta:  0.00003 avgGoalDelta:  0.00996 INTERIM_REWARD: -0.16017
+distDelta:  0.10630 avgGoalDelta:  0.06776 INTERIM_REWARD:  0.07105
+distDelta:  0.00002 avgGoalDelta:  0.02712 INTERIM_REWARD: -0.09154
+distDelta: -0.12258 avgGoalDelta: -0.06270 INTERIM_REWARD: -0.09154
+distDelta:  0.12258 avgGoalDelta:  0.04847 INTERIM_REWARD: -0.00614
+distDelta:  0.00000 avgGoalDelta:  0.01939 INTERIM_REWARD: -0.12244
+distDelta:  0.09884 avgGoalDelta:  0.06706 INTERIM_REWARD:  0.06825
+distDelta:  0.09451 avgGoalDelta:  0.08353 INTERIM_REWARD:  0.13412
+distDelta: -0.09425 avgGoalDelta: -0.02314 INTERIM_REWARD:  0.13412
+distDelta: -0.09908 avgGoalDelta: -0.06870 INTERIM_REWARD:  0.13412
+distDelta: -0.10633 avgGoalDelta: -0.09128 INTERIM_REWARD:  0.13412
+distDelta:  0.10629 avgGoalDelta:  0.02726 INTERIM_REWARD: -0.09095
+distDelta:  0.09886 avgGoalDelta:  0.07022 INTERIM_REWARD:  0.08089
+distDelta:  0.09451 avgGoalDelta:  0.08480 INTERIM_REWARD:  0.13919
+distDelta: -0.09426 avgGoalDelta: -0.02264 INTERIM_REWARD:  0.13919
+distDelta: -0.11812 avgGoalDelta: -0.07993 INTERIM_REWARD:  0.13919
+distDelta:  0.09382 avgGoalDelta:  0.02432 INTERIM_REWARD: -0.10273
+distDelta:  0.00026 avgGoalDelta:  0.00989 INTERIM_REWARD: -0.16046
+distDelta: -0.00002 avgGoalDelta:  0.00394 INTERIM_REWARD: -0.18422
+distDelta:  0.00000 avgGoalDelta:  0.00158 INTERIM_REWARD: -0.19369
+distDelta:  0.00000 avgGoalDelta:  0.00063 INTERIM_REWARD: -0.19747
+distDelta: -0.00000 avgGoalDelta:  0.00025 INTERIM_REWARD: -0.19899
+distDelta: -0.00001 avgGoalDelta:  0.00010 INTERIM_REWARD: -0.19961
+distDelta:  0.00001 avgGoalDelta:  0.00004 INTERIM_REWARD: -0.19983
+distDelta: -0.00001 avgGoalDelta:  0.00001 INTERIM_REWARD: -0.19995
+distDelta:  0.00001 avgGoalDelta:  0.00001 INTERIM_REWARD: -0.19996
+distDelta:  0.00000 avgGoalDelta:  0.00000 INTERIM_REWARD: -0.19998
+distDelta: -0.10713 avgGoalDelta: -0.06428 INTERIM_REWARD: -0.19998
+distDelta: -0.10294 avgGoalDelta: -0.08747 INTERIM_REWARD: -0.19998
+distDelta:  0.00001 avgGoalDelta: -0.03499 INTERIM_REWARD: -0.19998
+distDelta: -0.00001 avgGoalDelta: -0.01400 INTERIM_REWARD: -0.19998
+distDelta:  0.10295 avgGoalDelta:  0.05617 INTERIM_REWARD:  0.02468
+distDelta: -0.10297 avgGoalDelta: -0.03931 INTERIM_REWARD:  0.02468
+distDelta:  0.00002 avgGoalDelta: -0.01571 INTERIM_REWARD:  0.02468
+distDelta: -0.00001 avgGoalDelta: -0.00629 INTERIM_REWARD:  0.02468
+distDelta:  0.00001 avgGoalDelta: -0.00251 INTERIM_REWARD:  0.02468
+distDelta:  0.00000 avgGoalDelta: -0.00100 INTERIM_REWARD:  0.02468
+distDelta:  0.00000 avgGoalDelta: -0.00040 INTERIM_REWARD:  0.02468
+distDelta: -0.00001 avgGoalDelta: -0.00016 INTERIM_REWARD:  0.02468
+distDelta:  0.00001 avgGoalDelta: -0.00006 INTERIM_REWARD:  0.02468
+distDelta: -0.00000 avgGoalDelta: -0.00002 INTERIM_REWARD:  0.02468
+distDelta:  0.00000 avgGoalDelta: -0.00001 INTERIM_REWARD:  0.02468
+distDelta: -0.00001 avgGoalDelta: -0.00001 INTERIM_REWARD:  0.02468
+distDelta:  0.00001 avgGoalDelta:  0.00000 INTERIM_REWARD: -0.20000
+distDelta:  0.00000 avgGoalDelta:  0.00000 INTERIM_REWARD: -0.20000
+distDelta: -0.00001 avgGoalDelta: -0.00000 INTERIM_REWARD: -0.20000
+distDelta: -0.10493 avgGoalDelta: -0.06296 INTERIM_REWARD: -0.20000
+distDelta: -0.00032 avgGoalDelta: -0.02538 INTERIM_REWARD: -0.20000
+distDelta: -0.00000 avgGoalDelta: -0.01015 INTERIM_REWARD: -0.20000
+distDelta:  0.00000 avgGoalDelta: -0.00406 INTERIM_REWARD: -0.20000
+distDelta: -0.00001 avgGoalDelta: -0.00163 INTERIM_REWARD: -0.20000
+distDelta:  0.00001 avgGoalDelta: -0.00065 INTERIM_REWARD: -0.20000
+distDelta: -0.00000 avgGoalDelta: -0.00026 INTERIM_REWARD: -0.20000
+distDelta:  0.00000 avgGoalDelta: -0.00010 INTERIM_REWARD: -0.20000
+distDelta: -0.00000 avgGoalDelta: -0.00004 INTERIM_REWARD: -0.20000
+distDelta: -0.00001 avgGoalDelta: -0.00002 INTERIM_REWARD: -0.20000
+distDelta:  0.00001 avgGoalDelta: -0.00000 INTERIM_REWARD: -0.20000
+distDelta: -0.00001 avgGoalDelta: -0.00001 INTERIM_REWARD: -0.20000
+distDelta:  0.00001 avgGoalDelta:  0.00000 INTERIM_REWARD: -0.19999
+ArmPlugin - triggering EOE, episode has exceeded 100 frames
+Current Accuracy:  0.0000 (000 of 001)  (reward=-30.00 LOSS)
+distDelta:  0.08737 avgGoalDelta:  0.05242 INTERIM_REWARD:  0.00969
+distDelta:  0.14641 avgGoalDelta:  0.10882 INTERIM_REWARD:  0.23527
+distDelta:  0.15112 avgGoalDelta:  0.13420 INTERIM_REWARD:  0.33679
+distDelta:  0.09554 avgGoalDelta:  0.11100 INTERIM_REWARD:  0.24401
+distDelta:  0.10019 avgGoalDelta:  0.10451 INTERIM_REWARD:  0.21805
+distDelta:  0.10410 avgGoalDelta:  0.10426 INTERIM_REWARD:  0.21705
+distDelta:  0.00001 avgGoalDelta:  0.04171 INTERIM_REWARD: -0.03316
+distDelta: -0.00001 avgGoalDelta:  0.01668 INTERIM_REWARD: -0.13329
+distDelta: -0.10409 avgGoalDelta: -0.05578 INTERIM_REWARD: -0.13329
+distDelta:  0.00000 avgGoalDelta: -0.02231 INTERIM_REWARD: -0.13329
+distDelta:  0.15775 avgGoalDelta:  0.08573 INTERIM_REWARD:  0.14291
+distDelta:  0.17333 avgGoalDelta:  0.13829 INTERIM_REWARD:  0.35315
+distDelta:  0.00001 avgGoalDelta:  0.05532 INTERIM_REWARD:  0.02129
+distDelta: -0.00000 avgGoalDelta:  0.02213 INTERIM_REWARD: -0.11149
+distDelta:  0.00000 avgGoalDelta:  0.00885 INTERIM_REWARD: -0.16459
+distDelta:  0.00000 avgGoalDelta:  0.00354 INTERIM_REWARD: -0.18584
+distDelta: -0.00001 avgGoalDelta:  0.00141 INTERIM_REWARD: -0.19436
+distDelta:  0.00000 avgGoalDelta:  0.00056 INTERIM_REWARD: -0.19774
+distDelta:  0.00001 avgGoalDelta:  0.00023 INTERIM_REWARD: -0.19908
+distDelta: -0.00000 avgGoalDelta:  0.00009 INTERIM_REWARD: -0.19963
+distDelta:  0.00000 avgGoalDelta:  0.00004 INTERIM_REWARD: -0.19985
+distDelta: -0.00000 avgGoalDelta:  0.00001 INTERIM_REWARD: -0.19994
+distDelta: -0.00001 avgGoalDelta:  0.00000 INTERIM_REWARD: -0.20000
+distDelta:  0.00001 avgGoalDelta:  0.00001 INTERIM_REWARD: -0.19998
+distDelta: -0.00001 avgGoalDelta: -0.00000 INTERIM_REWARD: -0.19998
+distDelta: -0.00000 avgGoalDelta: -0.00000 INTERIM_REWARD: -0.19998
+distDelta:  0.00000 avgGoalDelta: -0.00000 INTERIM_REWARD: -0.19998
+distDelta:  0.00000 avgGoalDelta: -0.00000 INTERIM_REWARD: -0.19998
+distDelta:  0.00000 avgGoalDelta:  0.00000 INTERIM_REWARD: -0.20000
+distDelta:  0.00001 avgGoalDelta:  0.00001 INTERIM_REWARD: -0.19998
+distDelta: -0.17333 avgGoalDelta: -0.10399 INTERIM_REWARD: -0.19998
+distDelta: -0.15776 avgGoalDelta: -0.13625 INTERIM_REWARD: -0.19998
+distDelta: -0.15254 avgGoalDelta: -0.14602 INTERIM_REWARD: -0.19998
+distDelta:  0.15252 avgGoalDelta:  0.03310 INTERIM_REWARD: -0.06759
+distDelta:  0.15776 avgGoalDelta:  0.10790 INTERIM_REWARD:  0.23159
+distDelta:  0.00002 avgGoalDelta:  0.04317 INTERIM_REWARD: -0.02732
+distDelta:  0.17331 avgGoalDelta:  0.12126 INTERIM_REWARD:  0.28503
+distDelta:  0.18321 avgGoalDelta:  0.15843 INTERIM_REWARD:  0.43371
+distDelta:  0.18981 avgGoalDelta:  0.17726 INTERIM_REWARD:  0.50902
+distDelta:  0.17240 avgGoalDelta:  0.17434 INTERIM_REWARD:  0.49736
+distDelta:  0.07111 avgGoalDelta:  0.11240 INTERIM_REWARD:  0.24961
+ARM CONTACT
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.5000 (001 of 002)  (reward=+30.00 WIN)
+distDelta:  0.14047 avgGoalDelta:  0.08428 INTERIM_REWARD:  0.13712
+distDelta:  0.14635 avgGoalDelta:  0.12152 INTERIM_REWARD:  0.28609
+distDelta:  0.15111 avgGoalDelta:  0.13927 INTERIM_REWARD:  0.35709
+distDelta:  0.15452 avgGoalDelta:  0.14842 INTERIM_REWARD:  0.39369
+distDelta:  0.16274 avgGoalDelta:  0.15701 INTERIM_REWARD:  0.42805
+distDelta:  0.17880 avgGoalDelta:  0.17009 INTERIM_REWARD:  0.48034
+distDelta:  0.18128 avgGoalDelta:  0.17680 INTERIM_REWARD:  0.50720
+distDelta:  0.17859 avgGoalDelta:  0.17787 INTERIM_REWARD:  0.51149
+distDelta:  0.16287 avgGoalDelta:  0.16887 INTERIM_REWARD:  0.47549
+distDelta:  0.06708 avgGoalDelta:  0.10780 INTERIM_REWARD:  0.23120
+ARM CONTACT
+Current Accuracy:  0.6667 (002 of 003)  (reward=+30.00 WIN)
+distDelta: -0.00001 avgGoalDelta: -0.00001 INTERIM_REWARD: 30.00000
+distDelta:  0.14474 avgGoalDelta:  0.08684 INTERIM_REWARD:  0.14736
+distDelta:  0.00000 avgGoalDelta:  0.03474 INTERIM_REWARD: -0.06105
+distDelta:  0.08914 avgGoalDelta:  0.06738 INTERIM_REWARD:  0.06950
+distDelta: -0.00001 avgGoalDelta:  0.02695 INTERIM_REWARD: -0.09221
+distDelta:  0.15116 avgGoalDelta:  0.10147 INTERIM_REWARD:  0.20590
+distDelta:  0.15456 avgGoalDelta:  0.13332 INTERIM_REWARD:  0.33329
+distDelta:  0.16305 avgGoalDelta:  0.15116 INTERIM_REWARD:  0.40465
+distDelta:  0.17897 avgGoalDelta:  0.16785 INTERIM_REWARD:  0.47139
+distDelta:  0.00000 avgGoalDelta:  0.06714 INTERIM_REWARD:  0.06856
+distDelta:  0.18123 avgGoalDelta:  0.13560 INTERIM_REWARD:  0.34239
+distDelta:  0.00001 avgGoalDelta:  0.05424 INTERIM_REWARD:  0.01697
+distDelta:  0.17877 avgGoalDelta:  0.12896 INTERIM_REWARD:  0.31583
+distDelta:  0.16187 avgGoalDelta:  0.14870 INTERIM_REWARD:  0.39482
+distDelta:  0.06477 avgGoalDelta:  0.09835 INTERIM_REWARD:  0.19339
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.7500 (003 of 004)  (reward=+30.00 WIN)
+distDelta:  0.00003 avgGoalDelta:  0.00002 INTERIM_REWARD: -0.19993
+distDelta:  0.13523 avgGoalDelta:  0.08115 INTERIM_REWARD:  0.12458
+distDelta: -0.13526 avgGoalDelta: -0.04870 INTERIM_REWARD:  0.12458
+distDelta:  0.13527 avgGoalDelta:  0.06168 INTERIM_REWARD:  0.04673
+distDelta: -0.00003 avgGoalDelta:  0.02465 INTERIM_REWARD: -0.10138
+distDelta:  0.14232 avgGoalDelta:  0.09525 INTERIM_REWARD:  0.18101
+distDelta:  0.14816 avgGoalDelta:  0.12700 INTERIM_REWARD:  0.30800
+distDelta:  0.15275 avgGoalDelta:  0.14245 INTERIM_REWARD:  0.36981
+distDelta:  0.15587 avgGoalDelta:  0.15050 INTERIM_REWARD:  0.40201
+distDelta:  0.16526 avgGoalDelta:  0.15935 INTERIM_REWARD:  0.43742
+distDelta:  0.18034 avgGoalDelta:  0.17195 INTERIM_REWARD:  0.48778
+distDelta:  0.18126 avgGoalDelta:  0.17754 INTERIM_REWARD:  0.51014
+distDelta:  0.17538 avgGoalDelta:  0.17624 INTERIM_REWARD:  0.50496
+distDelta:  0.15304 avgGoalDelta:  0.16232 INTERIM_REWARD:  0.44927
+distDelta:  0.07037 avgGoalDelta:  0.10715 INTERIM_REWARD:  0.22859
+ARM CONTACT
+Current Accuracy:  0.8000 (004 of 005)  (reward=+30.00 WIN)
+distDelta: -0.13827 avgGoalDelta: -0.08296 INTERIM_REWARD: 30.00000
+distDelta:  0.13826 avgGoalDelta:  0.04977 INTERIM_REWARD: -0.00090
+distDelta:  0.14467 avgGoalDelta:  0.10671 INTERIM_REWARD:  0.22685
+distDelta:  0.14992 avgGoalDelta:  0.13264 INTERIM_REWARD:  0.33054
+distDelta:  0.15387 avgGoalDelta:  0.14537 INTERIM_REWARD:  0.38150
+distDelta:  0.15780 avgGoalDelta:  0.15283 INTERIM_REWARD:  0.41132
+distDelta:  0.17409 avgGoalDelta:  0.16558 INTERIM_REWARD:  0.46233
+distDelta:  0.18152 avgGoalDelta:  0.17514 INTERIM_REWARD:  0.50057
+distDelta:  0.17952 avgGoalDelta:  0.17777 INTERIM_REWARD:  0.51109
+distDelta:  0.16968 avgGoalDelta:  0.17292 INTERIM_REWARD:  0.49167
+distDelta:  0.12412 avgGoalDelta:  0.14364 INTERIM_REWARD:  0.37457
+GROUND CONTACT, EOE
+Current Accuracy:  0.6667 (004 of 006)  (reward=-60.00 LOSS)
+distDelta: -0.08056 avgGoalDelta: -0.04833 INTERIM_REWARD: -60.00000
+distDelta:  0.14230 avgGoalDelta:  0.06604 INTERIM_REWARD:  0.06418
+distDelta: -0.00001 avgGoalDelta:  0.02641 INTERIM_REWARD: -0.09435
+distDelta:  0.14815 avgGoalDelta:  0.09946 INTERIM_REWARD:  0.19783
+distDelta:  0.08444 avgGoalDelta:  0.09045 INTERIM_REWARD:  0.16180
+distDelta:  0.15379 avgGoalDelta:  0.12845 INTERIM_REWARD:  0.31382
+distDelta:  0.15756 avgGoalDelta:  0.14592 INTERIM_REWARD:  0.38367
+distDelta:  0.17366 avgGoalDelta:  0.16257 INTERIM_REWARD:  0.45026
+distDelta:  0.10079 avgGoalDelta:  0.12550 INTERIM_REWARD:  0.30199
+distDelta:  0.10435 avgGoalDelta:  0.11281 INTERIM_REWARD:  0.25124
+distDelta:  0.18240 avgGoalDelta:  0.15457 INTERIM_REWARD:  0.41826
+distDelta:  0.18218 avgGoalDelta:  0.17114 INTERIM_REWARD:  0.48454
+distDelta:  0.13277 avgGoalDelta:  0.14812 INTERIM_REWARD:  0.39247
+distDelta: -0.00001 avgGoalDelta:  0.05924 INTERIM_REWARD:  0.03696
+GROUND CONTACT, EOE
+Current Accuracy:  0.5714 (004 of 007)  (reward=-60.00 LOSS)
+distDelta: -0.08060 avgGoalDelta: -0.04836 INTERIM_REWARD: -60.00000
+distDelta:  0.14236 avgGoalDelta:  0.06608 INTERIM_REWARD:  0.06430
+distDelta:  0.14819 avgGoalDelta:  0.11535 INTERIM_REWARD:  0.26138
+distDelta:  0.15276 avgGoalDelta:  0.13780 INTERIM_REWARD:  0.35119
+distDelta:  0.15589 avgGoalDelta:  0.14865 INTERIM_REWARD:  0.39462
+distDelta:  0.16533 avgGoalDelta:  0.15866 INTERIM_REWARD:  0.43465
+distDelta:  0.18036 avgGoalDelta:  0.17168 INTERIM_REWARD:  0.48673
+distDelta: -0.18033 avgGoalDelta: -0.03953 INTERIM_REWARD:  0.48673
+distDelta:  0.18033 avgGoalDelta:  0.09239 INTERIM_REWARD:  0.16955
+distDelta:  0.18126 avgGoalDelta:  0.14571 INTERIM_REWARD:  0.38284
+distDelta:  0.17533 avgGoalDelta:  0.16348 INTERIM_REWARD:  0.45393
+distDelta:  0.00001 avgGoalDelta:  0.06540 INTERIM_REWARD:  0.06158
+distDelta:  0.15285 avgGoalDelta:  0.11787 INTERIM_REWARD:  0.27148
+distDelta:  0.06997 avgGoalDelta:  0.08913 INTERIM_REWARD:  0.15651
+ARM CONTACT
+Current Accuracy:  0.6250 (005 of 008)  (reward=+30.00 WIN)
+distDelta:  0.14055 avgGoalDelta:  0.08433 INTERIM_REWARD:  0.13731
+distDelta:  0.14643 avgGoalDelta:  0.12159 INTERIM_REWARD:  0.28635
+distDelta:  0.15114 avgGoalDelta:  0.13932 INTERIM_REWARD:  0.35728
+distDelta:  0.15455 avgGoalDelta:  0.14846 INTERIM_REWARD:  0.39383
+distDelta:  0.16297 avgGoalDelta:  0.15717 INTERIM_REWARD:  0.42866
+distDelta:  0.17893 avgGoalDelta:  0.17022 INTERIM_REWARD:  0.48090
+distDelta:  0.18125 avgGoalDelta:  0.17684 INTERIM_REWARD:  0.50736
+distDelta:  0.10584 avgGoalDelta:  0.13424 INTERIM_REWARD:  0.33697
+distDelta:  0.18160 avgGoalDelta:  0.16266 INTERIM_REWARD:  0.45062
+distDelta:  0.12950 avgGoalDelta:  0.14276 INTERIM_REWARD:  0.37105
+distDelta:  0.04830 avgGoalDelta:  0.08608 INTERIM_REWARD:  0.14433
+ARM CONTACT
+Current Accuracy:  0.6667 (006 of 009)  (reward=+30.00 WIN)
+distDelta:  0.14464 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14714
+distDelta:  0.14989 avgGoalDelta:  0.12465 INTERIM_REWARD:  0.29860
+distDelta:  0.15386 avgGoalDelta:  0.14218 INTERIM_REWARD:  0.36870
+distDelta:  0.15774 avgGoalDelta:  0.15151 INTERIM_REWARD:  0.40605
+distDelta:  0.17397 avgGoalDelta:  0.16499 INTERIM_REWARD:  0.45994
+distDelta: -0.09570 avgGoalDelta:  0.00857 INTERIM_REWARD: -0.16571
+distDelta:  0.18041 avgGoalDelta:  0.11168 INTERIM_REWARD:  0.24671
+distDelta:  0.18124 avgGoalDelta:  0.15342 INTERIM_REWARD:  0.41366
+distDelta:  0.17522 avgGoalDelta:  0.16650 INTERIM_REWARD:  0.46600
+distDelta:  0.15247 avgGoalDelta:  0.15808 INTERIM_REWARD:  0.43234
+distDelta:  0.06916 avgGoalDelta:  0.10473 INTERIM_REWARD:  0.21893
+ARM CONTACT
+Current Accuracy:  0.7000 (007 of 010)  (reward=+30.00 WIN)
+distDelta:  0.14456 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14696
+distDelta:  0.14981 avgGoalDelta:  0.12458 INTERIM_REWARD:  0.29833
+distDelta:  0.15381 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36847
+distDelta:  0.15760 avgGoalDelta:  0.15141 INTERIM_REWARD:  0.40563
+distDelta:  0.17371 avgGoalDelta:  0.16479 INTERIM_REWARD:  0.45916
+distDelta:  0.18151 avgGoalDelta:  0.17482 INTERIM_REWARD:  0.49929
+distDelta:  0.17965 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51087
+distDelta:  0.16984 avgGoalDelta:  0.17299 INTERIM_REWARD:  0.49196
+distDelta:  0.12651 avgGoalDelta:  0.14510 INTERIM_REWARD:  0.38041
+GROUND CONTACT, EOE
+Current Accuracy:  0.6364 (007 of 011)  (reward=-60.00 LOSS)
+distDelta:  0.08736 avgGoalDelta:  0.05242 INTERIM_REWARD:  0.00967
+distDelta:  0.14642 avgGoalDelta:  0.10882 INTERIM_REWARD:  0.23527
+distDelta:  0.15113 avgGoalDelta:  0.13420 INTERIM_REWARD:  0.33682
+distDelta:  0.15454 avgGoalDelta:  0.14641 INTERIM_REWARD:  0.38563
+distDelta:  0.16296 avgGoalDelta:  0.15634 INTERIM_REWARD:  0.42536
+distDelta:  0.17892 avgGoalDelta:  0.16989 INTERIM_REWARD:  0.47955
+distDelta:  0.18125 avgGoalDelta:  0.17671 INTERIM_REWARD:  0.50683
+distDelta:  0.17872 avgGoalDelta:  0.17791 INTERIM_REWARD:  0.51166
+distDelta:  0.16219 avgGoalDelta:  0.16848 INTERIM_REWARD:  0.47393
+distDelta:  0.07617 avgGoalDelta:  0.11310 INTERIM_REWARD:  0.25239
+distDelta:  0.04834 avgGoalDelta:  0.07424 INTERIM_REWARD:  0.09696
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.6667 (008 of 012)  (reward=+30.00 WIN)
+distDelta:  0.14463 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14712
+distDelta:  0.14990 avgGoalDelta:  0.12465 INTERIM_REWARD:  0.29860
+distDelta:  0.15385 avgGoalDelta:  0.14217 INTERIM_REWARD:  0.36869
+distDelta:  0.15772 avgGoalDelta:  0.15150 INTERIM_REWARD:  0.40600
+distDelta:  0.17395 avgGoalDelta:  0.16497 INTERIM_REWARD:  0.45988
+distDelta:  0.10074 avgGoalDelta:  0.12643 INTERIM_REWARD:  0.30574
+distDelta:  0.18126 avgGoalDelta:  0.15933 INTERIM_REWARD:  0.43733
+distDelta: -0.10048 avgGoalDelta:  0.00345 INTERIM_REWARD: -0.18621
+distDelta:  0.17957 avgGoalDelta:  0.10912 INTERIM_REWARD:  0.23647
+distDelta:  0.16963 avgGoalDelta:  0.14543 INTERIM_REWARD:  0.38171
+distDelta:  0.09265 avgGoalDelta:  0.11376 INTERIM_REWARD:  0.25504
+distDelta:  0.07695 avgGoalDelta:  0.09167 INTERIM_REWARD:  0.16668
+distDelta:  0.04865 avgGoalDelta:  0.06586 INTERIM_REWARD:  0.06344
+ARM CONTACT
+Current Accuracy:  0.6923 (009 of 013)  (reward=+30.00 WIN)
+distDelta:  0.14049 avgGoalDelta:  0.08429 INTERIM_REWARD:  0.13718
+distDelta: -0.00000 avgGoalDelta:  0.03372 INTERIM_REWARD: -0.06514
+distDelta:  0.14638 avgGoalDelta:  0.10131 INTERIM_REWARD:  0.20525
+distDelta:  0.15112 avgGoalDelta:  0.13120 INTERIM_REWARD:  0.32479
+distDelta:  0.15453 avgGoalDelta:  0.14520 INTERIM_REWARD:  0.38078
+distDelta:  0.00001 avgGoalDelta:  0.05809 INTERIM_REWARD:  0.03235
+distDelta:  0.16280 avgGoalDelta:  0.12091 INTERIM_REWARD:  0.28366
+distDelta:  0.17884 avgGoalDelta:  0.15567 INTERIM_REWARD:  0.42268
+distDelta:  0.18127 avgGoalDelta:  0.17103 INTERIM_REWARD:  0.48412
+distDelta:  0.17864 avgGoalDelta:  0.17560 INTERIM_REWARD:  0.50239
+distDelta:  0.16263 avgGoalDelta:  0.16781 INTERIM_REWARD:  0.47126
+distDelta:  0.07676 avgGoalDelta:  0.11318 INTERIM_REWARD:  0.25274
+distDelta:  0.04859 avgGoalDelta:  0.07443 INTERIM_REWARD:  0.09770
+ARM CONTACT
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.7143 (010 of 014)  (reward=+30.00 WIN)
+distDelta:  0.14466 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14718
+distDelta:  0.14991 avgGoalDelta:  0.12467 INTERIM_REWARD:  0.29866
+distDelta:  0.15386 avgGoalDelta:  0.14218 INTERIM_REWARD:  0.36874
+distDelta:  0.15778 avgGoalDelta:  0.15154 INTERIM_REWARD:  0.40617
+distDelta:  0.17404 avgGoalDelta:  0.16504 INTERIM_REWARD:  0.46017
+distDelta:  0.18152 avgGoalDelta:  0.17493 INTERIM_REWARD:  0.49971
+distDelta:  0.17955 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51079
+distDelta:  0.16966 avgGoalDelta:  0.17287 INTERIM_REWARD:  0.49150
+distDelta:  0.09256 avgGoalDelta:  0.12469 INTERIM_REWARD:  0.29875
+distDelta:  0.07657 avgGoalDelta:  0.09581 INTERIM_REWARD:  0.18326
+distDelta:  0.04852 avgGoalDelta:  0.06744 INTERIM_REWARD:  0.06976
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.7333 (011 of 015)  (reward=+30.00 WIN)
+distDelta:  0.14460 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14704
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29848
+distDelta:  0.15385 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36862
+distDelta:  0.15768 avgGoalDelta:  0.15147 INTERIM_REWARD:  0.40587
+distDelta:  0.17385 avgGoalDelta:  0.16490 INTERIM_REWARD:  0.45960
+distDelta:  0.00001 avgGoalDelta:  0.06597 INTERIM_REWARD:  0.06387
+distDelta:  0.18150 avgGoalDelta:  0.13529 INTERIM_REWARD:  0.34115
+distDelta:  0.17960 avgGoalDelta:  0.16188 INTERIM_REWARD:  0.44750
+distDelta:  0.16970 avgGoalDelta:  0.16657 INTERIM_REWARD:  0.46627
+distDelta:  0.09282 avgGoalDelta:  0.12232 INTERIM_REWARD:  0.28928
+distDelta:  0.07733 avgGoalDelta:  0.09533 INTERIM_REWARD:  0.18130
+distDelta:  0.04886 avgGoalDelta:  0.06744 INTERIM_REWARD:  0.06978
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.7500 (012 of 016)  (reward=+30.00 WIN)
+distDelta:  0.13819 avgGoalDelta:  0.08291 INTERIM_REWARD:  0.13166
+distDelta:  0.14461 avgGoalDelta:  0.11993 INTERIM_REWARD:  0.27972
+distDelta:  0.14989 avgGoalDelta:  0.13790 INTERIM_REWARD:  0.35162
+distDelta:  0.15384 avgGoalDelta:  0.14747 INTERIM_REWARD:  0.38987
+distDelta:  0.15770 avgGoalDelta:  0.15361 INTERIM_REWARD:  0.41443
+distDelta:  0.17390 avgGoalDelta:  0.16578 INTERIM_REWARD:  0.46313
+distDelta:  0.18152 avgGoalDelta:  0.17523 INTERIM_REWARD:  0.50091
+distDelta:  0.17958 avgGoalDelta:  0.17784 INTERIM_REWARD:  0.51135
+distDelta:  0.16972 avgGoalDelta:  0.17297 INTERIM_REWARD:  0.49187
+distDelta:  0.09277 avgGoalDelta:  0.12485 INTERIM_REWARD:  0.29939
+distDelta:  0.07715 avgGoalDelta:  0.09623 INTERIM_REWARD:  0.18492
+distDelta:  0.04879 avgGoalDelta:  0.06776 INTERIM_REWARD:  0.07106
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.7647 (013 of 017)  (reward=+30.00 WIN)
+distDelta:  0.14463 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14711
+distDelta:  0.14989 avgGoalDelta:  0.12464 INTERIM_REWARD:  0.29857
+distDelta:  0.15385 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36866
+distDelta:  0.15772 avgGoalDelta:  0.15150 INTERIM_REWARD:  0.40599
+distDelta:  0.17397 avgGoalDelta:  0.16498 INTERIM_REWARD:  0.45992
+distDelta:  0.18151 avgGoalDelta:  0.17490 INTERIM_REWARD:  0.49960
+distDelta:  0.17957 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51080
+distDelta:  0.16973 avgGoalDelta:  0.17292 INTERIM_REWARD:  0.49167
+distDelta:  0.09272 avgGoalDelta:  0.12480 INTERIM_REWARD:  0.29921
+distDelta:  0.07696 avgGoalDelta:  0.09610 INTERIM_REWARD:  0.18439
+distDelta:  0.04872 avgGoalDelta:  0.06767 INTERIM_REWARD:  0.07068
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.7778 (014 of 018)  (reward=+30.00 WIN)
+distDelta:  0.14457 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14697
+distDelta:  0.14984 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29841
+distDelta:  0.15382 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36853
+distDelta:  0.15761 avgGoalDelta:  0.15142 INTERIM_REWARD:  0.40569
+distDelta:  0.17376 avgGoalDelta:  0.16482 INTERIM_REWARD:  0.45930
+distDelta:  0.18152 avgGoalDelta:  0.17484 INTERIM_REWARD:  0.49937
+distDelta:  0.17963 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51086
+distDelta:  0.16976 avgGoalDelta:  0.17294 INTERIM_REWARD:  0.49176
+distDelta:  0.09298 avgGoalDelta:  0.12497 INTERIM_REWARD:  0.29987
+distDelta: -0.09300 avgGoalDelta: -0.00582 INTERIM_REWARD:  0.29987
+distDelta:  0.09301 avgGoalDelta:  0.05348 INTERIM_REWARD:  0.01392
+distDelta:  0.07771 avgGoalDelta:  0.06802 INTERIM_REWARD:  0.07208
+distDelta:  0.04907 avgGoalDelta:  0.05665 INTERIM_REWARD:  0.02661
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.7895 (015 of 019)  (reward=+30.00 WIN)
+distDelta:  0.14460 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14703
+distDelta:  0.14984 avgGoalDelta:  0.12461 INTERIM_REWARD:  0.29842
+distDelta:  0.15382 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36855
+distDelta:  0.15765 avgGoalDelta:  0.15145 INTERIM_REWARD:  0.40578
+distDelta:  0.17381 avgGoalDelta:  0.16487 INTERIM_REWARD:  0.45946
+distDelta:  0.18151 avgGoalDelta:  0.17485 INTERIM_REWARD:  0.49941
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51084
+distDelta:  0.16978 avgGoalDelta:  0.17295 INTERIM_REWARD:  0.49180
+distDelta:  0.09294 avgGoalDelta:  0.12494 INTERIM_REWARD:  0.29977
+distDelta:  0.07753 avgGoalDelta:  0.09650 INTERIM_REWARD:  0.18599
+distDelta:  0.04900 avgGoalDelta:  0.06800 INTERIM_REWARD:  0.07199
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8000 (016 of 020)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14703
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29848
+distDelta:  0.15383 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36858
+distDelta:  0.15768 avgGoalDelta:  0.15146 INTERIM_REWARD:  0.40586
+distDelta:  0.17386 avgGoalDelta:  0.16490 INTERIM_REWARD:  0.45962
+distDelta:  0.18150 avgGoalDelta:  0.17486 INTERIM_REWARD:  0.49946
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51083
+distDelta:  0.16979 avgGoalDelta:  0.17296 INTERIM_REWARD:  0.49184
+distDelta:  0.09289 avgGoalDelta:  0.12492 INTERIM_REWARD:  0.29968
+distDelta:  0.07735 avgGoalDelta:  0.09638 INTERIM_REWARD:  0.18551
+distDelta: -0.00001 avgGoalDelta:  0.03854 INTERIM_REWARD: -0.04583
+distDelta:  0.04894 avgGoalDelta:  0.04478 INTERIM_REWARD: -0.02088
+ARM CONTACT
+Current Accuracy:  0.8095 (017 of 021)  (reward=+30.00 WIN)
+distDelta:  0.14461 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14706
+distDelta:  0.14987 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29851
+distDelta:  0.15383 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36860
+distDelta:  0.15770 avgGoalDelta:  0.15148 INTERIM_REWARD:  0.40593
+distDelta:  0.17392 avgGoalDelta:  0.16494 INTERIM_REWARD:  0.45977
+distDelta:  0.00001 avgGoalDelta:  0.06598 INTERIM_REWARD:  0.06394
+distDelta:  0.18150 avgGoalDelta:  0.13529 INTERIM_REWARD:  0.34117
+distDelta:  0.17957 avgGoalDelta:  0.16186 INTERIM_REWARD:  0.44744
+distDelta:  0.16982 avgGoalDelta:  0.16664 INTERIM_REWARD:  0.46655
+distDelta:  0.09285 avgGoalDelta:  0.12236 INTERIM_REWARD:  0.28945
+distDelta: -0.00002 avgGoalDelta:  0.04894 INTERIM_REWARD: -0.00426
+distDelta:  0.07718 avgGoalDelta:  0.06588 INTERIM_REWARD:  0.06352
+distDelta:  0.04886 avgGoalDelta:  0.05567 INTERIM_REWARD:  0.02267
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8182 (018 of 022)  (reward=+30.00 WIN)
+distDelta:  0.14454 avgGoalDelta:  0.08672 INTERIM_REWARD:  0.14689
+distDelta:  0.14983 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29834
+distDelta:  0.15381 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36847
+distDelta:  0.15760 avgGoalDelta:  0.15141 INTERIM_REWARD:  0.40563
+distDelta:  0.00001 avgGoalDelta:  0.06057 INTERIM_REWARD:  0.04228
+distDelta:  0.17370 avgGoalDelta:  0.12845 INTERIM_REWARD:  0.31380
+distDelta:  0.18152 avgGoalDelta:  0.16029 INTERIM_REWARD:  0.44117
+distDelta:  0.17963 avgGoalDelta:  0.17190 INTERIM_REWARD:  0.48759
+distDelta:  0.16985 avgGoalDelta:  0.17067 INTERIM_REWARD:  0.48267
+distDelta:  0.09311 avgGoalDelta:  0.12413 INTERIM_REWARD:  0.29653
+distDelta: -0.00002 avgGoalDelta:  0.04964 INTERIM_REWARD: -0.00143
+distDelta:  0.00000 avgGoalDelta:  0.01986 INTERIM_REWARD: -0.12057
+distDelta:  0.07793 avgGoalDelta:  0.05470 INTERIM_REWARD:  0.01879
+distDelta:  0.04922 avgGoalDelta:  0.05141 INTERIM_REWARD:  0.00564
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8261 (019 of 023)  (reward=+30.00 WIN)
+distDelta:  0.14456 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14695
+distDelta:  0.08902 avgGoalDelta:  0.08811 INTERIM_REWARD:  0.15244
+distDelta:  0.15104 avgGoalDelta:  0.12587 INTERIM_REWARD:  0.30348
+distDelta:  0.15448 avgGoalDelta:  0.14304 INTERIM_REWARD:  0.37215
+distDelta:  0.16258 avgGoalDelta:  0.15476 INTERIM_REWARD:  0.41905
+distDelta:  0.17871 avgGoalDelta:  0.16913 INTERIM_REWARD:  0.47653
+distDelta:  0.18128 avgGoalDelta:  0.17642 INTERIM_REWARD:  0.50568
+distDelta:  0.17868 avgGoalDelta:  0.17777 INTERIM_REWARD:  0.51110
+distDelta:  0.16329 avgGoalDelta:  0.16909 INTERIM_REWARD:  0.47634
+distDelta:  0.07774 avgGoalDelta:  0.11428 INTERIM_REWARD:  0.25710
+distDelta: -0.00001 avgGoalDelta:  0.04570 INTERIM_REWARD: -0.01719
+distDelta:  0.04915 avgGoalDelta:  0.04777 INTERIM_REWARD: -0.00892
+ARM CONTACT
+Current Accuracy:  0.8333 (020 of 024)  (reward=+30.00 WIN)
+distDelta:  0.14457 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14696
+distDelta: -0.14458 avgGoalDelta: -0.05205 INTERIM_REWARD:  0.14696
+distDelta:  0.14459 avgGoalDelta:  0.06593 INTERIM_REWARD:  0.06373
+distDelta:  0.14984 avgGoalDelta:  0.11627 INTERIM_REWARD:  0.26510
+distDelta:  0.15382 avgGoalDelta:  0.13880 INTERIM_REWARD:  0.35522
+distDelta: -0.08558 avgGoalDelta:  0.00418 INTERIM_REWARD: -0.18330
+distDelta:  0.15587 avgGoalDelta:  0.09519 INTERIM_REWARD:  0.18078
+distDelta:  0.16537 avgGoalDelta:  0.13730 INTERIM_REWARD:  0.34919
+distDelta:  0.18037 avgGoalDelta:  0.16314 INTERIM_REWARD:  0.45257
+distDelta:  0.18125 avgGoalDelta:  0.17401 INTERIM_REWARD:  0.49603
+distDelta:  0.09531 avgGoalDelta:  0.12679 INTERIM_REWARD:  0.30715
+distDelta:  0.16987 avgGoalDelta:  0.15264 INTERIM_REWARD:  0.41056
+distDelta:  0.09301 avgGoalDelta:  0.11686 INTERIM_REWARD:  0.26744
+distDelta:  0.07755 avgGoalDelta:  0.09328 INTERIM_REWARD:  0.17311
+distDelta:  0.04906 avgGoalDelta:  0.06675 INTERIM_REWARD:  0.06700
+ARM CONTACT
+Current Accuracy:  0.8400 (021 of 025)  (reward=+30.00 WIN)
+distDelta:  0.14452 avgGoalDelta:  0.08671 INTERIM_REWARD:  0.14684
+distDelta:  0.14980 avgGoalDelta:  0.12456 INTERIM_REWARD:  0.29826
+distDelta:  0.15379 avgGoalDelta:  0.14210 INTERIM_REWARD:  0.36839
+distDelta:  0.15755 avgGoalDelta:  0.15137 INTERIM_REWARD:  0.40548
+distDelta:  0.00001 avgGoalDelta:  0.06056 INTERIM_REWARD:  0.04222
+distDelta:  0.17361 avgGoalDelta:  0.12839 INTERIM_REWARD:  0.31354
+distDelta: -0.17361 avgGoalDelta: -0.05281 INTERIM_REWARD:  0.31354
+distDelta:  0.17360 avgGoalDelta:  0.08303 INTERIM_REWARD:  0.13214
+distDelta:  0.18152 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36850
+distDelta:  0.17966 avgGoalDelta:  0.16465 INTERIM_REWARD:  0.45859
+distDelta:  0.16990 avgGoalDelta:  0.16780 INTERIM_REWARD:  0.47120
+distDelta:  0.09328 avgGoalDelta:  0.12309 INTERIM_REWARD:  0.29235
+distDelta:  0.07829 avgGoalDelta:  0.09621 INTERIM_REWARD:  0.18484
+distDelta:  0.04944 avgGoalDelta:  0.06815 INTERIM_REWARD:  0.07259
+ARM CONTACT
+Current Accuracy:  0.8462 (022 of 026)  (reward=+30.00 WIN)
+distDelta: -0.08057 avgGoalDelta: -0.04834 INTERIM_REWARD: 30.00000
+distDelta:  0.14228 avgGoalDelta:  0.06603 INTERIM_REWARD:  0.06414
+distDelta:  0.14816 avgGoalDelta:  0.11531 INTERIM_REWARD:  0.26123
+distDelta:  0.15274 avgGoalDelta:  0.13777 INTERIM_REWARD:  0.35107
+distDelta:  0.15587 avgGoalDelta:  0.14863 INTERIM_REWARD:  0.39453
+distDelta:  0.16519 avgGoalDelta:  0.15857 INTERIM_REWARD:  0.43427
+distDelta:  0.00000 avgGoalDelta:  0.06343 INTERIM_REWARD:  0.05372
+distDelta:  0.18030 avgGoalDelta:  0.13355 INTERIM_REWARD:  0.33420
+distDelta:  0.18127 avgGoalDelta:  0.16218 INTERIM_REWARD:  0.44873
+distDelta:  0.17543 avgGoalDelta:  0.17013 INTERIM_REWARD:  0.48052
+distDelta:  0.15314 avgGoalDelta:  0.15994 INTERIM_REWARD:  0.43974
+distDelta:  0.07077 avgGoalDelta:  0.10644 INTERIM_REWARD:  0.22575
+ARM CONTACT
+Current Accuracy:  0.8519 (023 of 027)  (reward=+30.00 WIN)
+distDelta:  0.13541 avgGoalDelta:  0.08125 INTERIM_REWARD:  0.12498
+distDelta:  0.14241 avgGoalDelta:  0.11794 INTERIM_REWARD:  0.27177
+distDelta:  0.14826 avgGoalDelta:  0.13613 INTERIM_REWARD:  0.34453
+distDelta:  0.15282 avgGoalDelta:  0.14615 INTERIM_REWARD:  0.38459
+distDelta:  0.15592 avgGoalDelta:  0.15201 INTERIM_REWARD:  0.40805
+distDelta:  0.16560 avgGoalDelta:  0.16016 INTERIM_REWARD:  0.44065
+distDelta:  0.18045 avgGoalDelta:  0.17234 INTERIM_REWARD:  0.48935
+distDelta:  0.18122 avgGoalDelta:  0.17767 INTERIM_REWARD:  0.51068
+distDelta:  0.17516 avgGoalDelta:  0.17617 INTERIM_REWARD:  0.50466
+distDelta:  0.15235 avgGoalDelta:  0.16188 INTERIM_REWARD:  0.44751
+distDelta:  0.06844 avgGoalDelta:  0.10581 INTERIM_REWARD:  0.22325
+ARM CONTACT
+Current Accuracy:  0.8571 (024 of 028)  (reward=+30.00 WIN)
+distDelta:  0.13044 avgGoalDelta:  0.07827 INTERIM_REWARD:  0.11306
+distDelta:  0.13804 avgGoalDelta:  0.11413 INTERIM_REWARD:  0.25652
+distDelta: -0.00001 avgGoalDelta:  0.04564 INTERIM_REWARD: -0.01742
+distDelta:  0.14450 avgGoalDelta:  0.10496 INTERIM_REWARD:  0.21984
+distDelta:  0.14978 avgGoalDelta:  0.13185 INTERIM_REWARD:  0.32741
+distDelta:  0.15378 avgGoalDelta:  0.14501 INTERIM_REWARD:  0.38003
+distDelta:  0.15750 avgGoalDelta:  0.15250 INTERIM_REWARD:  0.41002
+distDelta:  0.17353 avgGoalDelta:  0.16512 INTERIM_REWARD:  0.46049
+distDelta:  0.18150 avgGoalDelta:  0.17495 INTERIM_REWARD:  0.49979
+distDelta:  0.17971 avgGoalDelta:  0.17780 INTERIM_REWARD:  0.51121
+distDelta:  0.16992 avgGoalDelta:  0.17307 INTERIM_REWARD:  0.49229
+distDelta:  0.09339 avgGoalDelta:  0.12526 INTERIM_REWARD:  0.30106
+distDelta:  0.07861 avgGoalDelta:  0.09727 INTERIM_REWARD:  0.18909
+distDelta:  0.04963 avgGoalDelta:  0.06869 INTERIM_REWARD:  0.07474
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8621 (025 of 029)  (reward=+30.00 WIN)
+distDelta:  0.14471 avgGoalDelta:  0.08683 INTERIM_REWARD:  0.14730
+distDelta:  0.14997 avgGoalDelta:  0.12471 INTERIM_REWARD:  0.29885
+distDelta:  0.15389 avgGoalDelta:  0.14222 INTERIM_REWARD:  0.36887
+distDelta:  0.15786 avgGoalDelta:  0.15161 INTERIM_REWARD:  0.40642
+distDelta:  0.17419 avgGoalDelta:  0.16516 INTERIM_REWARD:  0.46063
+distDelta:  0.18153 avgGoalDelta:  0.17498 INTERIM_REWARD:  0.49993
+distDelta:  0.17949 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51076
+distDelta:  0.00000 avgGoalDelta:  0.07108 INTERIM_REWARD:  0.08431
+distDelta:  0.16947 avgGoalDelta:  0.13011 INTERIM_REWARD:  0.32045
+distDelta:  0.09222 avgGoalDelta:  0.10738 INTERIM_REWARD:  0.22952
+distDelta: -0.00001 avgGoalDelta:  0.04295 INTERIM_REWARD: -0.02820
+distDelta:  0.07594 avgGoalDelta:  0.06274 INTERIM_REWARD:  0.05097
+distDelta:  0.04817 avgGoalDelta:  0.05400 INTERIM_REWARD:  0.01600
+ARM CONTACT
+Current Accuracy:  0.8667 (026 of 030)  (reward=+30.00 WIN)
+distDelta:  0.14473 avgGoalDelta:  0.08684 INTERIM_REWARD:  0.14735
+distDelta:  0.14997 avgGoalDelta:  0.12472 INTERIM_REWARD:  0.29887
+distDelta:  0.15390 avgGoalDelta:  0.14223 INTERIM_REWARD:  0.36891
+distDelta:  0.15789 avgGoalDelta:  0.15163 INTERIM_REWARD:  0.40651
+distDelta:  0.17423 avgGoalDelta:  0.16519 INTERIM_REWARD:  0.46076
+distDelta:  0.18152 avgGoalDelta:  0.17499 INTERIM_REWARD:  0.49996
+distDelta:  0.17948 avgGoalDelta:  0.17768 INTERIM_REWARD:  0.51073
+distDelta:  0.16950 avgGoalDelta:  0.17277 INTERIM_REWARD:  0.49110
+distDelta:  0.09217 avgGoalDelta:  0.12441 INTERIM_REWARD:  0.29765
+distDelta:  0.07574 avgGoalDelta:  0.09521 INTERIM_REWARD:  0.18083
+distDelta:  0.04812 avgGoalDelta:  0.06695 INTERIM_REWARD:  0.06781
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8710 (027 of 031)  (reward=+30.00 WIN)
+distDelta:  0.14467 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14721
+distDelta:  0.14993 avgGoalDelta:  0.12468 INTERIM_REWARD:  0.29871
+distDelta:  0.15388 avgGoalDelta:  0.14220 INTERIM_REWARD:  0.36879
+distDelta:  0.15778 avgGoalDelta:  0.15155 INTERIM_REWARD:  0.40619
+distDelta:  0.17405 avgGoalDelta:  0.16505 INTERIM_REWARD:  0.46019
+distDelta:  0.18151 avgGoalDelta:  0.17493 INTERIM_REWARD:  0.49970
+distDelta:  0.17955 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51080
+distDelta:  0.16953 avgGoalDelta:  0.17280 INTERIM_REWARD:  0.49120
+distDelta:  0.09245 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29835
+distDelta: -0.00001 avgGoalDelta:  0.04983 INTERIM_REWARD: -0.00068
+distDelta:  0.07653 avgGoalDelta:  0.06585 INTERIM_REWARD:  0.06339
+distDelta:  0.04841 avgGoalDelta:  0.05539 INTERIM_REWARD:  0.02155
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8750 (028 of 032)  (reward=+30.00 WIN)
+distDelta:  0.14468 avgGoalDelta:  0.08681 INTERIM_REWARD:  0.14722
+distDelta:  0.14994 avgGoalDelta:  0.12469 INTERIM_REWARD:  0.29875
+distDelta:  0.15387 avgGoalDelta:  0.14220 INTERIM_REWARD:  0.36879
+distDelta:  0.15781 avgGoalDelta:  0.15157 INTERIM_REWARD:  0.40626
+distDelta:  0.17410 avgGoalDelta:  0.16509 INTERIM_REWARD:  0.46034
+distDelta:  0.18153 avgGoalDelta:  0.17495 INTERIM_REWARD:  0.49981
+distDelta:  0.17952 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51078
+distDelta:  0.16955 avgGoalDelta:  0.17281 INTERIM_REWARD:  0.49122
+distDelta:  0.09240 avgGoalDelta:  0.12456 INTERIM_REWARD:  0.29824
+distDelta:  0.07633 avgGoalDelta:  0.09562 INTERIM_REWARD:  0.18248
+distDelta:  0.04836 avgGoalDelta:  0.06726 INTERIM_REWARD:  0.06905
+ARM CONTACT
+Current Accuracy:  0.8788 (029 of 033)  (reward=+30.00 WIN)
+distDelta:  0.14470 avgGoalDelta:  0.08682 INTERIM_REWARD:  0.14727
+distDelta:  0.14994 avgGoalDelta:  0.12469 INTERIM_REWARD:  0.29877
+distDelta: -0.14994 avgGoalDelta: -0.04009 INTERIM_REWARD:  0.29877
+distDelta:  0.14993 avgGoalDelta:  0.07392 INTERIM_REWARD:  0.09570
+distDelta:  0.15389 avgGoalDelta:  0.12191 INTERIM_REWARD:  0.28763
+distDelta:  0.15783 avgGoalDelta:  0.14346 INTERIM_REWARD:  0.37384
+distDelta:  0.17415 avgGoalDelta:  0.16187 INTERIM_REWARD:  0.44750
+distDelta:  0.18152 avgGoalDelta:  0.17366 INTERIM_REWARD:  0.49465
+distDelta:  0.17952 avgGoalDelta:  0.17717 INTERIM_REWARD:  0.50870
+distDelta:  0.16956 avgGoalDelta:  0.17261 INTERIM_REWARD:  0.49043
+distDelta:  0.09235 avgGoalDelta:  0.12445 INTERIM_REWARD:  0.29780
+distDelta:  0.07614 avgGoalDelta:  0.09546 INTERIM_REWARD:  0.18185
+distDelta:  0.04830 avgGoalDelta:  0.06716 INTERIM_REWARD:  0.06865
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8824 (030 of 034)  (reward=+30.00 WIN)
+distDelta:  0.14473 avgGoalDelta:  0.08684 INTERIM_REWARD:  0.14734
+distDelta:  0.14994 avgGoalDelta:  0.12470 INTERIM_REWARD:  0.29878
+distDelta:  0.15389 avgGoalDelta:  0.14221 INTERIM_REWARD:  0.36885
+distDelta:  0.15787 avgGoalDelta:  0.15161 INTERIM_REWARD:  0.40642
+distDelta:  0.17420 avgGoalDelta:  0.16516 INTERIM_REWARD:  0.46065
+distDelta:  0.18152 avgGoalDelta:  0.17498 INTERIM_REWARD:  0.49991
+distDelta:  0.17948 avgGoalDelta:  0.17768 INTERIM_REWARD:  0.51071
+distDelta:  0.16958 avgGoalDelta:  0.17282 INTERIM_REWARD:  0.49128
+distDelta:  0.09230 avgGoalDelta:  0.12451 INTERIM_REWARD:  0.29803
+distDelta:  0.07594 avgGoalDelta:  0.09537 INTERIM_REWARD:  0.18148
+distDelta:  0.04825 avgGoalDelta:  0.06710 INTERIM_REWARD:  0.06838
+ARM CONTACT
+Current Accuracy:  0.8857 (031 of 035)  (reward=+30.00 WIN)
+distDelta:  0.14465 avgGoalDelta:  0.08679 INTERIM_REWARD:  0.14716
+distDelta:  0.14990 avgGoalDelta:  0.12466 INTERIM_REWARD:  0.29862
+distDelta:  0.15387 avgGoalDelta:  0.14219 INTERIM_REWARD:  0.36874
+distDelta:  0.15775 avgGoalDelta:  0.15152 INTERIM_REWARD:  0.40610
+distDelta:  0.17400 avgGoalDelta:  0.16501 INTERIM_REWARD:  0.46005
+distDelta:  0.18153 avgGoalDelta:  0.17492 INTERIM_REWARD:  0.49969
+distDelta:  0.17955 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51081
+distDelta: -0.00001 avgGoalDelta:  0.07108 INTERIM_REWARD:  0.08430
+distDelta:  0.16962 avgGoalDelta:  0.13020 INTERIM_REWARD:  0.32081
+distDelta:  0.09257 avgGoalDelta:  0.10762 INTERIM_REWARD:  0.23049
+distDelta:  0.07672 avgGoalDelta:  0.08908 INTERIM_REWARD:  0.15632
+distDelta:  0.04855 avgGoalDelta:  0.06476 INTERIM_REWARD:  0.05905
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8889 (032 of 036)  (reward=+30.00 WIN)
+distDelta:  0.14466 avgGoalDelta:  0.08679 INTERIM_REWARD:  0.14717
+distDelta:  0.14993 avgGoalDelta:  0.12467 INTERIM_REWARD:  0.29869
+distDelta:  0.15386 avgGoalDelta:  0.14218 INTERIM_REWARD:  0.36874
+distDelta:  0.15779 avgGoalDelta:  0.15155 INTERIM_REWARD:  0.40620
+distDelta:  0.17405 avgGoalDelta:  0.16505 INTERIM_REWARD:  0.46020
+distDelta:  0.18153 avgGoalDelta:  0.17494 INTERIM_REWARD:  0.49974
+distDelta:  0.17953 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51077
+distDelta:  0.00001 avgGoalDelta:  0.07108 INTERIM_REWARD:  0.08433
+distDelta:  0.16963 avgGoalDelta:  0.13021 INTERIM_REWARD:  0.32084
+distDelta:  0.09252 avgGoalDelta:  0.10759 INTERIM_REWARD:  0.23038
+distDelta:  0.07653 avgGoalDelta:  0.08896 INTERIM_REWARD:  0.15583
+distDelta:  0.04849 avgGoalDelta:  0.06467 INTERIM_REWARD:  0.05870
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8919 (033 of 037)  (reward=+30.00 WIN)
+distDelta:  0.14468 avgGoalDelta:  0.08681 INTERIM_REWARD:  0.14723
+distDelta:  0.14993 avgGoalDelta:  0.12468 INTERIM_REWARD:  0.29871
+distDelta:  0.15387 avgGoalDelta:  0.14219 INTERIM_REWARD:  0.36878
+distDelta:  0.15781 avgGoalDelta:  0.15157 INTERIM_REWARD:  0.40626
+distDelta:  0.17411 avgGoalDelta:  0.16509 INTERIM_REWARD:  0.46037
+distDelta:  0.18152 avgGoalDelta:  0.17495 INTERIM_REWARD:  0.49979
+distDelta:  0.17952 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51076
+distDelta:  0.16965 avgGoalDelta:  0.17286 INTERIM_REWARD:  0.49145
+distDelta:  0.09247 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29851
+distDelta:  0.07634 avgGoalDelta:  0.09566 INTERIM_REWARD:  0.18262
+distDelta:  0.04843 avgGoalDelta:  0.06732 INTERIM_REWARD:  0.06928
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.8947 (034 of 038)  (reward=+30.00 WIN)
+distDelta:  0.14462 avgGoalDelta:  0.08677 INTERIM_REWARD:  0.14708
+distDelta:  0.14988 avgGoalDelta:  0.12464 INTERIM_REWARD:  0.29855
+distDelta:  0.15385 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36865
+distDelta:  0.15770 avgGoalDelta:  0.15148 INTERIM_REWARD:  0.40593
+distDelta:  0.17391 avgGoalDelta:  0.16494 INTERIM_REWARD:  0.45976
+distDelta:  0.18152 avgGoalDelta:  0.17489 INTERIM_REWARD:  0.49956
+distDelta:  0.17958 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51083
+distDelta:  0.16967 avgGoalDelta:  0.17288 INTERIM_REWARD:  0.49154
+distDelta:  0.09274 avgGoalDelta:  0.12480 INTERIM_REWARD:  0.29919
+distDelta:  0.07712 avgGoalDelta:  0.09619 INTERIM_REWARD:  0.18475
+distDelta:  0.04875 avgGoalDelta:  0.06773 INTERIM_REWARD:  0.07090
+ARM CONTACT
+Current Accuracy:  0.8974 (035 of 039)  (reward=+30.00 WIN)
+distDelta:  0.14463 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14712
+distDelta:  0.14989 avgGoalDelta:  0.12465 INTERIM_REWARD:  0.29859
+distDelta:  0.15384 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36865
+distDelta:  0.15773 avgGoalDelta:  0.15150 INTERIM_REWARD:  0.40602
+distDelta:  0.17397 avgGoalDelta:  0.16499 INTERIM_REWARD:  0.45994
+distDelta:  0.18152 avgGoalDelta:  0.17490 INTERIM_REWARD:  0.49961
+distDelta:  0.17956 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51079
+distDelta:  0.16970 avgGoalDelta:  0.17290 INTERIM_REWARD:  0.49160
+distDelta:  0.09269 avgGoalDelta:  0.12477 INTERIM_REWARD:  0.29910
+distDelta:  0.07692 avgGoalDelta:  0.09606 INTERIM_REWARD:  0.18426
+distDelta:  0.04868 avgGoalDelta:  0.06764 INTERIM_REWARD:  0.07054
+ARM CONTACT
+Current Accuracy:  0.9000 (036 of 040)  (reward=+30.00 WIN)
+distDelta:  0.14464 avgGoalDelta:  0.08679 INTERIM_REWARD:  0.14715
+distDelta:  0.14989 avgGoalDelta:  0.12465 INTERIM_REWARD:  0.29860
+distDelta:  0.15385 avgGoalDelta:  0.14217 INTERIM_REWARD:  0.36869
+distDelta:  0.15777 avgGoalDelta:  0.15153 INTERIM_REWARD:  0.40612
+distDelta:  0.17401 avgGoalDelta:  0.16502 INTERIM_REWARD:  0.46006
+distDelta:  0.18152 avgGoalDelta:  0.17492 INTERIM_REWARD:  0.49968
+distDelta:  0.17955 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51079
+distDelta:  0.16970 avgGoalDelta:  0.17290 INTERIM_REWARD:  0.49161
+distDelta:  0.09265 avgGoalDelta:  0.12475 INTERIM_REWARD:  0.29900
+distDelta:  0.07673 avgGoalDelta:  0.09594 INTERIM_REWARD:  0.18376
+distDelta:  0.04862 avgGoalDelta:  0.06755 INTERIM_REWARD:  0.07020
+ARM CONTACT
+Current Accuracy:  0.9024 (037 of 041)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14701
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29846
+distDelta:  0.15382 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36855
+distDelta:  0.15765 avgGoalDelta:  0.15145 INTERIM_REWARD:  0.40579
+distDelta:  0.17383 avgGoalDelta:  0.16487 INTERIM_REWARD:  0.45950
+distDelta:  0.18151 avgGoalDelta:  0.17486 INTERIM_REWARD:  0.49943
+distDelta:  0.17960 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51082
+distDelta:  0.16974 avgGoalDelta:  0.17293 INTERIM_REWARD:  0.49171
+distDelta:  0.09291 avgGoalDelta:  0.12492 INTERIM_REWARD:  0.29967
+distDelta:  0.07750 avgGoalDelta:  0.09646 INTERIM_REWARD:  0.18586
+distDelta:  0.04896 avgGoalDelta:  0.06796 INTERIM_REWARD:  0.07185
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9048 (038 of 042)  (reward=+30.00 WIN)
+distDelta:  0.14460 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14703
+distDelta:  0.14987 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29849
+distDelta:  0.15383 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36860
+distDelta:  0.15768 avgGoalDelta:  0.15147 INTERIM_REWARD:  0.40587
+distDelta:  0.17387 avgGoalDelta:  0.16491 INTERIM_REWARD:  0.45963
+distDelta:  0.18151 avgGoalDelta:  0.17487 INTERIM_REWARD:  0.49948
+distDelta:  0.17959 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51081
+distDelta:  0.16977 avgGoalDelta:  0.17294 INTERIM_REWARD:  0.49176
+distDelta:  0.09286 avgGoalDelta:  0.12489 INTERIM_REWARD:  0.29957
+distDelta:  0.07731 avgGoalDelta:  0.09634 INTERIM_REWARD:  0.18538
+distDelta:  0.04889 avgGoalDelta:  0.06787 INTERIM_REWARD:  0.07148
+ARM CONTACT
+Current Accuracy:  0.9070 (039 of 043)  (reward=+30.00 WIN)
+distDelta:  0.14461 avgGoalDelta:  0.08677 INTERIM_REWARD:  0.14707
+distDelta:  0.14987 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29851
+distDelta:  0.15384 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36863
+distDelta: -0.15381 avgGoalDelta: -0.03543 INTERIM_REWARD:  0.36863
+distDelta:  0.15381 avgGoalDelta:  0.07812 INTERIM_REWARD:  0.11247
+distDelta:  0.15770 avgGoalDelta:  0.12587 INTERIM_REWARD:  0.30347
+distDelta:  0.17393 avgGoalDelta:  0.15470 INTERIM_REWARD:  0.41882
+distDelta:  0.18151 avgGoalDelta:  0.17079 INTERIM_REWARD:  0.48316
+distDelta:  0.17958 avgGoalDelta:  0.17606 INTERIM_REWARD:  0.50425
+distDelta:  0.16978 avgGoalDelta:  0.17229 INTERIM_REWARD:  0.48916
+distDelta:  0.09281 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29841
+distDelta:  0.07713 avgGoalDelta:  0.09612 INTERIM_REWARD:  0.18447
+distDelta: -0.00001 avgGoalDelta:  0.03844 INTERIM_REWARD: -0.04624
+distDelta:  0.04883 avgGoalDelta:  0.04467 INTERIM_REWARD: -0.02130
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9091 (040 of 044)  (reward=+30.00 WIN)
+distDelta:  0.14454 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14691
+distDelta:  0.14983 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29836
+distDelta:  0.15381 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36849
+distDelta:  0.15761 avgGoalDelta:  0.15142 INTERIM_REWARD:  0.40566
+distDelta:  0.17371 avgGoalDelta:  0.16479 INTERIM_REWARD:  0.45917
+distDelta:  0.18151 avgGoalDelta:  0.17482 INTERIM_REWARD:  0.49930
+distDelta:  0.17965 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51088
+distDelta:  0.16980 avgGoalDelta:  0.17297 INTERIM_REWARD:  0.49188
+distDelta:  0.09307 avgGoalDelta:  0.12503 INTERIM_REWARD:  0.30013
+distDelta:  0.07787 avgGoalDelta:  0.09674 INTERIM_REWARD:  0.18695
+distDelta:  0.04918 avgGoalDelta:  0.06820 INTERIM_REWARD:  0.07281
+ARM CONTACT
+Current Accuracy:  0.9111 (041 of 045)  (reward=+30.00 WIN)
+distDelta:  0.14456 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14694
+distDelta:  0.14985 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29841
+distDelta:  0.15381 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36850
+distDelta:  0.15764 avgGoalDelta:  0.15143 INTERIM_REWARD:  0.40573
+distDelta:  0.17377 avgGoalDelta:  0.16484 INTERIM_REWARD:  0.45935
+distDelta:  0.18151 avgGoalDelta:  0.17484 INTERIM_REWARD:  0.49937
+distDelta:  0.10054 avgGoalDelta:  0.13026 INTERIM_REWARD:  0.32105
+distDelta:  0.17864 avgGoalDelta:  0.15929 INTERIM_REWARD:  0.43715
+distDelta:  0.10894 avgGoalDelta:  0.12908 INTERIM_REWARD:  0.31632
+distDelta:  0.13204 avgGoalDelta:  0.13086 INTERIM_REWARD:  0.32343
+distDelta:  0.04911 avgGoalDelta:  0.08181 INTERIM_REWARD:  0.12722
+ARM CONTACT
+Current Accuracy:  0.9130 (042 of 046)  (reward=+30.00 WIN)
+distDelta: -0.13817 avgGoalDelta: -0.08290 INTERIM_REWARD: 30.00000
+distDelta:  0.13816 avgGoalDelta:  0.04974 INTERIM_REWARD: -0.00104
+distDelta:  0.14457 avgGoalDelta:  0.10664 INTERIM_REWARD:  0.22656
+distDelta:  0.14986 avgGoalDelta:  0.13257 INTERIM_REWARD:  0.33028
+distDelta:  0.15381 avgGoalDelta:  0.14531 INTERIM_REWARD:  0.38126
+distDelta:  0.15766 avgGoalDelta:  0.15272 INTERIM_REWARD:  0.41090
+distDelta:  0.17383 avgGoalDelta:  0.16539 INTERIM_REWARD:  0.46154
+distDelta:  0.18151 avgGoalDelta:  0.17506 INTERIM_REWARD:  0.50024
+distDelta:  0.17961 avgGoalDelta:  0.17779 INTERIM_REWARD:  0.51116
+distDelta:  0.16984 avgGoalDelta:  0.17302 INTERIM_REWARD:  0.49208
+distDelta:  0.09298 avgGoalDelta:  0.12500 INTERIM_REWARD:  0.29998
+distDelta:  0.07751 avgGoalDelta:  0.09651 INTERIM_REWARD:  0.18602
+distDelta:  0.04903 avgGoalDelta:  0.06802 INTERIM_REWARD:  0.07208
+ARM CONTACT
+Current Accuracy:  0.9149 (043 of 047)  (reward=+30.00 WIN)
+distDelta:  0.14452 avgGoalDelta:  0.08671 INTERIM_REWARD:  0.14685
+distDelta:  0.14980 avgGoalDelta:  0.12456 INTERIM_REWARD:  0.29825
+distDelta:  0.15380 avgGoalDelta:  0.14211 INTERIM_REWARD:  0.36842
+distDelta:  0.15755 avgGoalDelta:  0.15137 INTERIM_REWARD:  0.40549
+distDelta:  0.17362 avgGoalDelta:  0.16472 INTERIM_REWARD:  0.45890
+distDelta:  0.18151 avgGoalDelta:  0.17479 INTERIM_REWARD:  0.49918
+distDelta:  0.17967 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51088
+distDelta:  0.16986 avgGoalDelta:  0.17300 INTERIM_REWARD:  0.49201
+distDelta:  0.09324 avgGoalDelta:  0.12515 INTERIM_REWARD:  0.30059
+distDelta:  0.07825 avgGoalDelta:  0.09701 INTERIM_REWARD:  0.18805
+distDelta: -0.00001 avgGoalDelta:  0.03880 INTERIM_REWARD: -0.04481
+distDelta:  0.04942 avgGoalDelta:  0.04517 INTERIM_REWARD: -0.01932
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9167 (044 of 048)  (reward=+30.00 WIN)
+distDelta:  0.14453 avgGoalDelta:  0.08672 INTERIM_REWARD:  0.14688
+distDelta:  0.14981 avgGoalDelta:  0.12458 INTERIM_REWARD:  0.29831
+distDelta:  0.15380 avgGoalDelta:  0.14211 INTERIM_REWARD:  0.36843
+distDelta:  0.15758 avgGoalDelta:  0.15139 INTERIM_REWARD:  0.40556
+distDelta:  0.17368 avgGoalDelta:  0.16476 INTERIM_REWARD:  0.45905
+distDelta:  0.10078 avgGoalDelta:  0.12637 INTERIM_REWARD:  0.30548
+distDelta:  0.18128 avgGoalDelta:  0.15932 INTERIM_REWARD:  0.43726
+distDelta:  0.17861 avgGoalDelta:  0.17089 INTERIM_REWARD:  0.48357
+distDelta:  0.16356 avgGoalDelta:  0.16649 INTERIM_REWARD:  0.46598
+distDelta:  0.07809 avgGoalDelta:  0.11345 INTERIM_REWARD:  0.25380
+distDelta:  0.04932 avgGoalDelta:  0.07497 INTERIM_REWARD:  0.09989
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9184 (045 of 049)  (reward=+30.00 WIN)
+distDelta: -0.00001 avgGoalDelta: -0.00001 INTERIM_REWARD: 30.00000
+distDelta:  0.14456 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14693
+distDelta:  0.14982 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29835
+distDelta:  0.15380 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36846
+distDelta:  0.15760 avgGoalDelta:  0.15140 INTERIM_REWARD:  0.40562
+distDelta:  0.17374 avgGoalDelta:  0.16481 INTERIM_REWARD:  0.45922
+distDelta:  0.18151 avgGoalDelta:  0.17483 INTERIM_REWARD:  0.49931
+distDelta:  0.17964 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51085
+distDelta:  0.16990 avgGoalDelta:  0.17303 INTERIM_REWARD:  0.49211
+distDelta:  0.09315 avgGoalDelta:  0.12510 INTERIM_REWARD:  0.30039
+distDelta:  0.07790 avgGoalDelta:  0.09678 INTERIM_REWARD:  0.18711
+distDelta:  0.04924 avgGoalDelta:  0.06826 INTERIM_REWARD:  0.07302
+ARM CONTACT
+Current Accuracy:  0.9200 (046 of 050)  (reward=+30.00 WIN)
+distDelta:  0.14449 avgGoalDelta:  0.08669 INTERIM_REWARD:  0.14677
+distDelta:  0.14978 avgGoalDelta:  0.12455 INTERIM_REWARD:  0.29818
+distDelta:  0.15377 avgGoalDelta:  0.14208 INTERIM_REWARD:  0.36833
+distDelta:  0.15750 avgGoalDelta:  0.15133 INTERIM_REWARD:  0.40534
+distDelta:  0.17353 avgGoalDelta:  0.16465 INTERIM_REWARD:  0.45860
+distDelta:  0.18151 avgGoalDelta:  0.17476 INTERIM_REWARD:  0.49905
+distDelta:  0.17970 avgGoalDelta:  0.17773 INTERIM_REWARD:  0.51090
+distDelta:  0.16992 avgGoalDelta:  0.17304 INTERIM_REWARD:  0.49216
+distDelta:  0.09341 avgGoalDelta:  0.12526 INTERIM_REWARD:  0.30104
+distDelta:  0.07863 avgGoalDelta:  0.09728 INTERIM_REWARD:  0.18913
+distDelta:  0.04964 avgGoalDelta:  0.06870 INTERIM_REWARD:  0.07478
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9216 (047 of 051)  (reward=+30.00 WIN)
+distDelta:  0.14471 avgGoalDelta:  0.08682 INTERIM_REWARD:  0.14730
+distDelta:  0.14997 avgGoalDelta:  0.12471 INTERIM_REWARD:  0.29884
+distDelta:  0.15389 avgGoalDelta:  0.14222 INTERIM_REWARD:  0.36887
+distDelta:  0.15786 avgGoalDelta:  0.15160 INTERIM_REWARD:  0.40642
+distDelta:  0.17419 avgGoalDelta:  0.16515 INTERIM_REWARD:  0.46062
+distDelta:  0.18153 avgGoalDelta:  0.17498 INTERIM_REWARD:  0.49992
+distDelta:  0.17949 avgGoalDelta:  0.17768 INTERIM_REWARD:  0.51074
+distDelta:  0.16949 avgGoalDelta:  0.17277 INTERIM_REWARD:  0.49108
+distDelta:  0.09223 avgGoalDelta:  0.12444 INTERIM_REWARD:  0.29777
+distDelta:  0.07595 avgGoalDelta:  0.09535 INTERIM_REWARD:  0.18140
+distDelta:  0.04818 avgGoalDelta:  0.06705 INTERIM_REWARD:  0.06818
+ARM CONTACT
+Current Accuracy:  0.9231 (048 of 052)  (reward=+30.00 WIN)
+distDelta:  0.14473 avgGoalDelta:  0.08684 INTERIM_REWARD:  0.14735
+distDelta:  0.14997 avgGoalDelta:  0.12472 INTERIM_REWARD:  0.29886
+distDelta:  0.15390 avgGoalDelta:  0.14223 INTERIM_REWARD:  0.36890
+distDelta:  0.15789 avgGoalDelta:  0.15163 INTERIM_REWARD:  0.40650
+distDelta:  0.17423 avgGoalDelta:  0.16519 INTERIM_REWARD:  0.46075
+distDelta:  0.18152 avgGoalDelta:  0.17499 INTERIM_REWARD:  0.49995
+distDelta:  0.17948 avgGoalDelta:  0.17768 INTERIM_REWARD:  0.51073
+distDelta:  0.16951 avgGoalDelta:  0.17278 INTERIM_REWARD:  0.49111
+distDelta:  0.09218 avgGoalDelta:  0.12442 INTERIM_REWARD:  0.29768
+distDelta:  0.07575 avgGoalDelta:  0.09522 INTERIM_REWARD:  0.18087
+distDelta:  0.04813 avgGoalDelta:  0.06696 INTERIM_REWARD:  0.06786
+ARM CONTACT
+Current Accuracy:  0.9245 (049 of 053)  (reward=+30.00 WIN)
+distDelta:  0.14466 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14719
+distDelta:  0.14992 avgGoalDelta:  0.12467 INTERIM_REWARD:  0.29869
+distDelta:  0.15388 avgGoalDelta:  0.14220 INTERIM_REWARD:  0.36880
+distDelta:  0.15778 avgGoalDelta:  0.15155 INTERIM_REWARD:  0.40620
+distDelta:  0.17403 avgGoalDelta:  0.16504 INTERIM_REWARD:  0.46016
+distDelta:  0.18152 avgGoalDelta:  0.17493 INTERIM_REWARD:  0.49971
+distDelta:  0.17955 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51081
+distDelta:  0.16953 avgGoalDelta:  0.17280 INTERIM_REWARD:  0.49120
+distDelta:  0.09246 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29838
+distDelta:  0.07653 avgGoalDelta:  0.09576 INTERIM_REWARD:  0.18303
+distDelta:  0.04842 avgGoalDelta:  0.06736 INTERIM_REWARD:  0.06943
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9259 (050 of 054)  (reward=+30.00 WIN)
+distDelta:  0.14467 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14722
+distDelta:  0.14993 avgGoalDelta:  0.12468 INTERIM_REWARD:  0.29873
+distDelta:  0.15389 avgGoalDelta:  0.14221 INTERIM_REWARD:  0.36882
+distDelta:  0.15781 avgGoalDelta:  0.15157 INTERIM_REWARD:  0.40627
+distDelta:  0.17409 avgGoalDelta:  0.16508 INTERIM_REWARD:  0.46031
+distDelta:  0.18152 avgGoalDelta:  0.17494 INTERIM_REWARD:  0.49978
+distDelta:  0.17953 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51077
+distDelta:  0.16956 avgGoalDelta:  0.17281 INTERIM_REWARD:  0.49125
+distDelta:  0.09240 avgGoalDelta:  0.12457 INTERIM_REWARD:  0.29827
+distDelta:  0.07634 avgGoalDelta:  0.09563 INTERIM_REWARD:  0.18254
+distDelta:  0.04836 avgGoalDelta:  0.06727 INTERIM_REWARD:  0.06909
+ARM CONTACT
+Current Accuracy:  0.9273 (051 of 055)  (reward=+30.00 WIN)
+distDelta:  0.14469 avgGoalDelta:  0.08681 INTERIM_REWARD:  0.14725
+distDelta:  0.14994 avgGoalDelta:  0.12469 INTERIM_REWARD:  0.29876
+distDelta:  0.15389 avgGoalDelta:  0.14221 INTERIM_REWARD:  0.36885
+distDelta:  0.15783 avgGoalDelta:  0.15158 INTERIM_REWARD:  0.40632
+distDelta:  0.17416 avgGoalDelta:  0.16513 INTERIM_REWARD:  0.46050
+distDelta:  0.18151 avgGoalDelta:  0.17496 INTERIM_REWARD:  0.49983
+distDelta:  0.17952 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51077
+distDelta:  0.16957 avgGoalDelta:  0.17282 INTERIM_REWARD:  0.49127
+distDelta:  0.09235 avgGoalDelta:  0.12454 INTERIM_REWARD:  0.29816
+distDelta:  0.07615 avgGoalDelta:  0.09551 INTERIM_REWARD:  0.18203
+distDelta:  0.04831 avgGoalDelta:  0.06719 INTERIM_REWARD:  0.06875
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9286 (052 of 056)  (reward=+30.00 WIN)
+distDelta:  0.14470 avgGoalDelta:  0.08682 INTERIM_REWARD:  0.14728
+distDelta:  0.14996 avgGoalDelta:  0.12470 INTERIM_REWARD:  0.29882
+distDelta:  0.15389 avgGoalDelta:  0.14221 INTERIM_REWARD:  0.36886
+distDelta:  0.15785 avgGoalDelta:  0.15160 INTERIM_REWARD:  0.40640
+distDelta:  0.17421 avgGoalDelta:  0.16516 INTERIM_REWARD:  0.46065
+distDelta:  0.18151 avgGoalDelta:  0.17497 INTERIM_REWARD:  0.49989
+distDelta:  0.17949 avgGoalDelta:  0.17768 INTERIM_REWARD:  0.51073
+distDelta:  0.16958 avgGoalDelta:  0.17282 INTERIM_REWARD:  0.49129
+distDelta:  0.09230 avgGoalDelta:  0.12451 INTERIM_REWARD:  0.29805
+distDelta:  0.07597 avgGoalDelta:  0.09538 INTERIM_REWARD:  0.18154
+distDelta:  0.04825 avgGoalDelta:  0.06711 INTERIM_REWARD:  0.06843
+ARM CONTACT
+Current Accuracy:  0.9298 (053 of 057)  (reward=+30.00 WIN)
+distDelta:  0.14465 avgGoalDelta:  0.08679 INTERIM_REWARD:  0.14716
+distDelta:  0.14991 avgGoalDelta:  0.12466 INTERIM_REWARD:  0.29864
+distDelta:  0.15386 avgGoalDelta:  0.14218 INTERIM_REWARD:  0.36873
+distDelta:  0.15775 avgGoalDelta:  0.15153 INTERIM_REWARD:  0.40610
+distDelta:  0.17400 avgGoalDelta:  0.16501 INTERIM_REWARD:  0.46004
+distDelta:  0.18152 avgGoalDelta:  0.17492 INTERIM_REWARD:  0.49966
+distDelta:  0.17956 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51080
+distDelta:  0.16961 avgGoalDelta:  0.17285 INTERIM_REWARD:  0.49138
+distDelta:  0.09258 avgGoalDelta:  0.12468 INTERIM_REWARD:  0.29874
+distDelta:  0.07674 avgGoalDelta:  0.09592 INTERIM_REWARD:  0.18367
+distDelta:  0.04856 avgGoalDelta:  0.06750 INTERIM_REWARD:  0.07001
+ARM CONTACT
+Current Accuracy:  0.9310 (054 of 058)  (reward=+30.00 WIN)
+distDelta:  0.14466 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14719
+distDelta:  0.14992 avgGoalDelta:  0.12467 INTERIM_REWARD:  0.29867
+distDelta:  0.15387 avgGoalDelta:  0.14219 INTERIM_REWARD:  0.36875
+distDelta:  0.15778 avgGoalDelta:  0.15154 INTERIM_REWARD:  0.40618
+distDelta:  0.17405 avgGoalDelta:  0.16505 INTERIM_REWARD:  0.46020
+distDelta:  0.18152 avgGoalDelta:  0.17493 INTERIM_REWARD:  0.49972
+distDelta:  0.17954 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51078
+distDelta:  0.16963 avgGoalDelta:  0.17286 INTERIM_REWARD:  0.49143
+distDelta:  0.09253 avgGoalDelta:  0.12466 INTERIM_REWARD:  0.29864
+distDelta:  0.07655 avgGoalDelta:  0.09579 INTERIM_REWARD:  0.18317
+distDelta:  0.04850 avgGoalDelta:  0.06742 INTERIM_REWARD:  0.06966
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9322 (055 of 059)  (reward=+30.00 WIN)
+distDelta:  0.14468 avgGoalDelta:  0.08681 INTERIM_REWARD:  0.14722
+distDelta:  0.14992 avgGoalDelta:  0.12467 INTERIM_REWARD:  0.29869
+distDelta:  0.15387 avgGoalDelta:  0.14219 INTERIM_REWARD:  0.36877
+distDelta:  0.15782 avgGoalDelta:  0.15157 INTERIM_REWARD:  0.40627
+distDelta:  0.17410 avgGoalDelta:  0.16509 INTERIM_REWARD:  0.46036
+distDelta:  0.18152 avgGoalDelta:  0.17495 INTERIM_REWARD:  0.49979
+distDelta:  0.17952 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51076
+distDelta:  0.16964 avgGoalDelta:  0.17286 INTERIM_REWARD:  0.49145
+distDelta:  0.09248 avgGoalDelta:  0.12464 INTERIM_REWARD:  0.29854
+distDelta:  0.07636 avgGoalDelta:  0.09567 INTERIM_REWARD:  0.18268
+distDelta:  0.04844 avgGoalDelta:  0.06733 INTERIM_REWARD:  0.06932
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9333 (056 of 060)  (reward=+30.00 WIN)
+distDelta:  0.14461 avgGoalDelta:  0.08677 INTERIM_REWARD:  0.14706
+distDelta:  0.14989 avgGoalDelta:  0.12464 INTERIM_REWARD:  0.29856
+distDelta:  0.15385 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36865
+distDelta:  0.15769 avgGoalDelta:  0.15148 INTERIM_REWARD:  0.40593
+distDelta:  0.17392 avgGoalDelta:  0.16494 INTERIM_REWARD:  0.45977
+distDelta:  0.18151 avgGoalDelta:  0.17489 INTERIM_REWARD:  0.49954
+distDelta:  0.10050 avgGoalDelta:  0.13026 INTERIM_REWARD:  0.32102
+distDelta:  0.17858 avgGoalDelta:  0.15925 INTERIM_REWARD:  0.43701
+distDelta:  0.16292 avgGoalDelta:  0.16145 INTERIM_REWARD:  0.44582
+distDelta:  0.07713 avgGoalDelta:  0.11086 INTERIM_REWARD:  0.24344
+distDelta:  0.04876 avgGoalDelta:  0.07360 INTERIM_REWARD:  0.09440
+ARM CONTACT
+Current Accuracy:  0.9344 (057 of 061)  (reward=+30.00 WIN)
+distDelta:  0.14463 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14711
+distDelta:  0.14989 avgGoalDelta:  0.12465 INTERIM_REWARD:  0.29858
+distDelta:  0.15385 avgGoalDelta:  0.14217 INTERIM_REWARD:  0.36867
+distDelta:  0.15772 avgGoalDelta:  0.15150 INTERIM_REWARD:  0.40600
+distDelta:  0.17396 avgGoalDelta:  0.16498 INTERIM_REWARD:  0.45990
+distDelta:  0.18152 avgGoalDelta:  0.17490 INTERIM_REWARD:  0.49962
+distDelta:  0.17957 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51081
+distDelta:  0.16969 avgGoalDelta:  0.17290 INTERIM_REWARD:  0.49158
+distDelta:  0.09270 avgGoalDelta:  0.12478 INTERIM_REWARD:  0.29911
+distDelta:  0.07695 avgGoalDelta:  0.09608 INTERIM_REWARD:  0.18432
+distDelta:  0.04869 avgGoalDelta:  0.06765 INTERIM_REWARD:  0.07059
+ARM CONTACT
+Current Accuracy:  0.9355 (058 of 062)  (reward=+30.00 WIN)
+distDelta:  0.14464 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14712
+distDelta:  0.14991 avgGoalDelta:  0.12466 INTERIM_REWARD:  0.29863
+distDelta:  0.15384 avgGoalDelta:  0.14217 INTERIM_REWARD:  0.36868
+distDelta:  0.15777 avgGoalDelta:  0.15153 INTERIM_REWARD:  0.40611
+distDelta:  0.17400 avgGoalDelta:  0.16501 INTERIM_REWARD:  0.46005
+distDelta:  0.18152 avgGoalDelta:  0.17492 INTERIM_REWARD:  0.49968
+distDelta:  0.17954 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51077
+distDelta:  0.16972 avgGoalDelta:  0.17291 INTERIM_REWARD:  0.49164
+distDelta:  0.09265 avgGoalDelta:  0.12475 INTERIM_REWARD:  0.29902
+distDelta:  0.07675 avgGoalDelta:  0.09595 INTERIM_REWARD:  0.18381
+distDelta:  0.04863 avgGoalDelta:  0.06756 INTERIM_REWARD:  0.07024
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9365 (059 of 063)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14700
+distDelta:  0.14986 avgGoalDelta:  0.12461 INTERIM_REWARD:  0.29845
+distDelta:  0.15383 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36857
+distDelta:  0.15765 avgGoalDelta:  0.15145 INTERIM_REWARD:  0.40579
+distDelta:  0.17381 avgGoalDelta:  0.16487 INTERIM_REWARD:  0.45947
+distDelta:  0.18151 avgGoalDelta:  0.17485 INTERIM_REWARD:  0.49942
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51084
+distDelta:  0.16974 avgGoalDelta:  0.17293 INTERIM_REWARD:  0.49172
+distDelta:  0.09291 avgGoalDelta:  0.12492 INTERIM_REWARD:  0.29968
+distDelta:  0.07751 avgGoalDelta:  0.09648 INTERIM_REWARD:  0.18590
+distDelta:  0.04897 avgGoalDelta:  0.06797 INTERIM_REWARD:  0.07189
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9375 (060 of 064)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14701
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29848
+distDelta:  0.15383 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36859
+distDelta:  0.15769 avgGoalDelta:  0.15147 INTERIM_REWARD:  0.40588
+distDelta:  0.17386 avgGoalDelta:  0.16491 INTERIM_REWARD:  0.45963
+distDelta:  0.18151 avgGoalDelta:  0.17487 INTERIM_REWARD:  0.49948
+distDelta:  0.17960 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51083
+distDelta:  0.16976 avgGoalDelta:  0.17294 INTERIM_REWARD:  0.49176
+distDelta:  0.09287 avgGoalDelta:  0.12490 INTERIM_REWARD:  0.29958
+distDelta:  0.07733 avgGoalDelta:  0.09636 INTERIM_REWARD:  0.18542
+distDelta:  0.04890 avgGoalDelta:  0.06788 INTERIM_REWARD:  0.07152
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9385 (061 of 065)  (reward=+30.00 WIN)
+distDelta:  0.14461 avgGoalDelta:  0.08677 INTERIM_REWARD:  0.14707
+distDelta:  0.14987 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29852
+distDelta:  0.15384 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36861
+distDelta:  0.15771 avgGoalDelta:  0.15148 INTERIM_REWARD:  0.40594
+distDelta:  0.17392 avgGoalDelta:  0.16494 INTERIM_REWARD:  0.45978
+distDelta:  0.18151 avgGoalDelta:  0.17489 INTERIM_REWARD:  0.49954
+distDelta:  0.17958 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51081
+distDelta:  0.16978 avgGoalDelta:  0.17295 INTERIM_REWARD:  0.49179
+distDelta:  0.09282 avgGoalDelta:  0.12487 INTERIM_REWARD:  0.29948
+distDelta: -0.00001 avgGoalDelta:  0.04994 INTERIM_REWARD: -0.00023
+distDelta:  0.07716 avgGoalDelta:  0.06627 INTERIM_REWARD:  0.06508
+distDelta:  0.04883 avgGoalDelta:  0.05580 INTERIM_REWARD:  0.02322
+ARM CONTACT
+Current Accuracy:  0.9394 (062 of 066)  (reward=+30.00 WIN)
+distDelta:  0.14455 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14692
+distDelta:  0.14983 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29836
+distDelta:  0.15381 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36849
+distDelta:  0.15760 avgGoalDelta:  0.15141 INTERIM_REWARD:  0.40564
+distDelta:  0.17372 avgGoalDelta:  0.16479 INTERIM_REWARD:  0.45917
+distDelta:  0.18151 avgGoalDelta:  0.17482 INTERIM_REWARD:  0.49929
+distDelta:  0.17964 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51086
+distDelta:  0.16981 avgGoalDelta:  0.17297 INTERIM_REWARD:  0.49188
+distDelta:  0.09308 avgGoalDelta:  0.12504 INTERIM_REWARD:  0.30014
+[1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m172.17.0.2[0m[1;32m
+[0m[1;32m[0mdistDelta:  0.07789 avgGoalDelta:  0.09675 INTERIM_REWARD:  0.18700
+distDelta:  0.04919 avgGoalDelta:  0.06821 INTERIM_REWARD:  0.07286
+ARM CONTACT
+Current Accuracy:  0.9403 (063 of 067)  (reward=+30.00 WIN)
+distDelta:  0.14456 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14696
+distDelta:  0.14984 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29840
+distDelta:  0.15381 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36851
+distDelta:  0.15763 avgGoalDelta:  0.15143 INTERIM_REWARD:  0.40571
+distDelta:  0.17377 avgGoalDelta:  0.16483 INTERIM_REWARD:  0.45933
+distDelta:  0.18151 avgGoalDelta:  0.17484 INTERIM_REWARD:  0.49936
+distDelta:  0.17963 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51084
+distDelta:  0.16982 avgGoalDelta:  0.17298 INTERIM_REWARD:  0.49190
+distDelta:  0.09304 avgGoalDelta:  0.12501 INTERIM_REWARD:  0.30006
+distDelta:  0.07771 avgGoalDelta:  0.09663 INTERIM_REWARD:  0.18654
+distDelta:  0.04911 avgGoalDelta:  0.06812 INTERIM_REWARD:  0.07248
+ARM CONTACT
+Current Accuracy:  0.9412 (064 of 068)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14702
+distDelta:  0.14983 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29841
+distDelta:  0.15382 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36853
+distDelta:  0.15765 avgGoalDelta:  0.15145 INTERIM_REWARD:  0.40578
+distDelta:  0.17382 avgGoalDelta:  0.16487 INTERIM_REWARD:  0.45948
+distDelta:  0.18150 avgGoalDelta:  0.17485 INTERIM_REWARD:  0.49940
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51082
+distDelta:  0.16985 avgGoalDelta:  0.17299 INTERIM_REWARD:  0.49197
+distDelta:  0.09299 avgGoalDelta:  0.12499 INTERIM_REWARD:  0.29996
+distDelta:  0.07753 avgGoalDelta:  0.09652 INTERIM_REWARD:  0.18606
+distDelta:  0.04904 avgGoalDelta:  0.06803 INTERIM_REWARD:  0.07211
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9420 (065 of 069)  (reward=+30.00 WIN)
+distDelta:  0.14452 avgGoalDelta:  0.08671 INTERIM_REWARD:  0.14685
+distDelta:  0.14980 avgGoalDelta:  0.12456 INTERIM_REWARD:  0.29825
+distDelta:  0.15380 avgGoalDelta:  0.14210 INTERIM_REWARD:  0.36842
+distDelta:  0.15755 avgGoalDelta:  0.15137 INTERIM_REWARD:  0.40549
+distDelta:  0.17361 avgGoalDelta:  0.16472 INTERIM_REWARD:  0.45886
+distDelta:  0.18151 avgGoalDelta:  0.17479 INTERIM_REWARD:  0.49916
+distDelta:  0.17968 avgGoalDelta:  0.17773 INTERIM_REWARD:  0.51090
+distDelta:  0.09938 avgGoalDelta:  0.13072 INTERIM_REWARD:  0.32286
+distDelta:  0.16373 avgGoalDelta:  0.15052 INTERIM_REWARD:  0.40209
+distDelta:  0.07828 avgGoalDelta:  0.10718 INTERIM_REWARD:  0.22871
+distDelta:  0.04942 avgGoalDelta:  0.07252 INTERIM_REWARD:  0.09008
+ARM CONTACT
+Current Accuracy:  0.9429 (066 of 070)  (reward=+30.00 WIN)
+distDelta:  0.14453 avgGoalDelta:  0.08672 INTERIM_REWARD:  0.14688
+distDelta:  0.14981 avgGoalDelta:  0.12458 INTERIM_REWARD:  0.29830
+distDelta:  0.15380 avgGoalDelta:  0.14211 INTERIM_REWARD:  0.36843
+distDelta:  0.15758 avgGoalDelta:  0.15139 INTERIM_REWARD:  0.40556
+distDelta:  0.17367 avgGoalDelta:  0.16476 INTERIM_REWARD:  0.45904
+distDelta:  0.18151 avgGoalDelta:  0.17481 INTERIM_REWARD:  0.49923
+distDelta:  0.17965 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51085
+distDelta:  0.09952 avgGoalDelta:  0.13080 INTERIM_REWARD:  0.32318
+distDelta: -0.09951 avgGoalDelta: -0.00739 INTERIM_REWARD:  0.32318
+distDelta:  0.09952 avgGoalDelta:  0.05676 INTERIM_REWARD:  0.02703
+distDelta:  0.16357 avgGoalDelta:  0.12084 INTERIM_REWARD:  0.28337
+distDelta:  0.07809 avgGoalDelta:  0.09519 INTERIM_REWARD:  0.18077
+distDelta:  0.04933 avgGoalDelta:  0.06768 INTERIM_REWARD:  0.07071
+ARM CONTACT
+Current Accuracy:  0.9437 (067 of 071)  (reward=+30.00 WIN)
+distDelta:  0.14455 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14691
+distDelta:  0.14981 avgGoalDelta:  0.12458 INTERIM_REWARD:  0.29832
+distDelta:  0.15380 avgGoalDelta:  0.14211 INTERIM_REWARD:  0.36845
+distDelta:  0.15761 avgGoalDelta:  0.15141 INTERIM_REWARD:  0.40564
+distDelta:  0.17372 avgGoalDelta:  0.16480 INTERIM_REWARD:  0.45918
+distDelta:  0.18151 avgGoalDelta:  0.17482 INTERIM_REWARD:  0.49929
+distDelta:  0.17965 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51087
+distDelta:  0.16990 avgGoalDelta:  0.17303 INTERIM_REWARD:  0.49211
+distDelta:  0.09316 avgGoalDelta:  0.12511 INTERIM_REWARD:  0.30043
+distDelta:  0.07791 avgGoalDelta:  0.09679 INTERIM_REWARD:  0.18716
+distDelta:  0.04925 avgGoalDelta:  0.06827 INTERIM_REWARD:  0.07307
+ARM CONTACT
+Current Accuracy:  0.9444 (068 of 072)  (reward=+30.00 WIN)
+distDelta:  0.14448 avgGoalDelta:  0.08669 INTERIM_REWARD:  0.14675
+distDelta:  0.14978 avgGoalDelta:  0.12454 INTERIM_REWARD:  0.29817
+distDelta:  0.15377 avgGoalDelta:  0.14208 INTERIM_REWARD:  0.36832
+distDelta:  0.15751 avgGoalDelta:  0.15134 INTERIM_REWARD:  0.40535
+distDelta:  0.17351 avgGoalDelta:  0.16464 INTERIM_REWARD:  0.45858
+distDelta:  0.18151 avgGoalDelta:  0.17477 INTERIM_REWARD:  0.49906
+distDelta:  0.17970 avgGoalDelta:  0.17773 INTERIM_REWARD:  0.51091
+distDelta:  0.16993 avgGoalDelta:  0.17305 INTERIM_REWARD:  0.49219
+distDelta:  0.09340 avgGoalDelta:  0.12526 INTERIM_REWARD:  0.30104
+distDelta:  0.07865 avgGoalDelta:  0.09729 INTERIM_REWARD:  0.18918
+distDelta:  0.04965 avgGoalDelta:  0.06871 INTERIM_REWARD:  0.07483
+ARM CONTACT
+Current Accuracy:  0.9452 (069 of 073)  (reward=+30.00 WIN)
+distDelta:  0.14471 avgGoalDelta:  0.08682 INTERIM_REWARD:  0.14729
+distDelta:  0.14996 avgGoalDelta:  0.12470 INTERIM_REWARD:  0.29882
+distDelta:  0.15391 avgGoalDelta:  0.14222 INTERIM_REWARD:  0.36890
+distDelta:  0.15785 avgGoalDelta:  0.15160 INTERIM_REWARD:  0.40640
+distDelta:  0.17419 avgGoalDelta:  0.16516 INTERIM_REWARD:  0.46062
+distDelta:  0.18151 avgGoalDelta:  0.17497 INTERIM_REWARD:  0.49988
+distDelta:  0.17950 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51075
+distDelta:  0.16950 avgGoalDelta:  0.17277 INTERIM_REWARD:  0.49109
+distDelta: -0.08958 avgGoalDelta:  0.01536 INTERIM_REWARD: -0.13855
+distDelta:  0.00001 avgGoalDelta:  0.00615 INTERIM_REWARD: -0.17538
+distDelta:  0.15198 avgGoalDelta:  0.09365 INTERIM_REWARD:  0.17460
+distDelta:  0.06770 avgGoalDelta:  0.07808 INTERIM_REWARD:  0.11231
+ARM CONTACT
+Current Accuracy:  0.9459 (070 of 074)  (reward=+30.00 WIN)
+distDelta:  0.14462 avgGoalDelta:  0.08677 INTERIM_REWARD:  0.14710
+distDelta:  0.14988 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29854
+distDelta:  0.15385 avgGoalDelta:  0.14217 INTERIM_REWARD:  0.36866
+distDelta:  0.15772 avgGoalDelta:  0.15150 INTERIM_REWARD:  0.40599
+distDelta:  0.17394 avgGoalDelta:  0.16496 INTERIM_REWARD:  0.45985
+distDelta:  0.18151 avgGoalDelta:  0.17489 INTERIM_REWARD:  0.49958
+distDelta:  0.17957 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51080
+distDelta:  0.16972 avgGoalDelta:  0.17291 INTERIM_REWARD:  0.49165
+distDelta:  0.09274 avgGoalDelta:  0.12481 INTERIM_REWARD:  0.29924
+distDelta:  0.07703 avgGoalDelta:  0.09614 INTERIM_REWARD:  0.18456
+distDelta:  0.04874 avgGoalDelta:  0.06770 INTERIM_REWARD:  0.07080
+ARM CONTACT
+Current Accuracy:  0.9467 (071 of 075)  (reward=+30.00 WIN)
+distDelta:  0.14464 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14713
+distDelta:  0.14989 avgGoalDelta:  0.12465 INTERIM_REWARD:  0.29859
+distDelta:  0.15385 avgGoalDelta:  0.14217 INTERIM_REWARD:  0.36868
+distDelta:  0.15774 avgGoalDelta:  0.15151 INTERIM_REWARD:  0.40606
+distDelta:  0.17399 avgGoalDelta:  0.16500 INTERIM_REWARD:  0.46001
+distDelta:  0.18151 avgGoalDelta:  0.17491 INTERIM_REWARD:  0.49964
+distDelta:  0.17956 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51079
+distDelta:  0.16974 avgGoalDelta:  0.17292 INTERIM_REWARD:  0.49169
+distDelta:  0.09269 avgGoalDelta:  0.12478 INTERIM_REWARD:  0.29914
+distDelta:  0.07684 avgGoalDelta:  0.09602 INTERIM_REWARD:  0.18407
+distDelta:  0.04868 avgGoalDelta:  0.06761 INTERIM_REWARD:  0.07045
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9474 (072 of 076)  (reward=+30.00 WIN)
+distDelta:  0.14458 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14699
+distDelta:  0.14985 avgGoalDelta:  0.12461 INTERIM_REWARD:  0.29843
+distDelta:  0.15382 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36854
+distDelta:  0.15764 avgGoalDelta:  0.15144 INTERIM_REWARD:  0.40576
+distDelta:  0.17378 avgGoalDelta:  0.16485 INTERIM_REWARD:  0.45938
+distDelta:  0.18152 avgGoalDelta:  0.17485 INTERIM_REWARD:  0.49940
+distDelta:  0.17962 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51085
+distDelta:  0.16977 avgGoalDelta:  0.17295 INTERIM_REWARD:  0.49178
+distDelta:  0.09296 avgGoalDelta:  0.12495 INTERIM_REWARD:  0.29981
+distDelta:  0.07760 avgGoalDelta:  0.09654 INTERIM_REWARD:  0.18615
+distDelta:  0.04902 avgGoalDelta:  0.06803 INTERIM_REWARD:  0.07211
+ARM CONTACT
+Current Accuracy:  0.9481 (073 of 077)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14702
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29847
+distDelta:  0.15382 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36855
+distDelta:  0.15768 avgGoalDelta:  0.15146 INTERIM_REWARD:  0.40585
+distDelta:  0.17384 avgGoalDelta:  0.16489 INTERIM_REWARD:  0.45957
+distDelta:  0.18150 avgGoalDelta:  0.17486 INTERIM_REWARD:  0.49943
+distDelta:  0.17960 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51082
+distDelta:  0.16979 avgGoalDelta:  0.17296 INTERIM_REWARD:  0.49183
+distDelta:  0.09291 avgGoalDelta:  0.12493 INTERIM_REWARD:  0.29972
+distDelta:  0.07741 avgGoalDelta:  0.09642 INTERIM_REWARD:  0.18568
+distDelta:  0.04895 avgGoalDelta:  0.06794 INTERIM_REWARD:  0.07175
+ARM CONTACT
+Current Accuracy:  0.9487 (074 of 078)  (reward=+30.00 WIN)
+distDelta:  0.14460 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14705
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29848
+distDelta:  0.15383 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36859
+distDelta:  0.00002 avgGoalDelta:  0.05687 INTERIM_REWARD:  0.02749
+distDelta:  0.15768 avgGoalDelta:  0.11736 INTERIM_REWARD:  0.26943
+distDelta:  0.17389 avgGoalDelta:  0.15128 INTERIM_REWARD:  0.40511
+distDelta:  0.18151 avgGoalDelta:  0.16942 INTERIM_REWARD:  0.47767
+distDelta:  0.17959 avgGoalDelta:  0.17552 INTERIM_REWARD:  0.50207
+distDelta:  0.16981 avgGoalDelta:  0.17209 INTERIM_REWARD:  0.48838
+distDelta:  0.09286 avgGoalDelta:  0.12455 INTERIM_REWARD:  0.29822
+distDelta:  0.07723 avgGoalDelta:  0.09616 INTERIM_REWARD:  0.18463
+distDelta:  0.04888 avgGoalDelta:  0.06779 INTERIM_REWARD:  0.07116
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9494 (075 of 079)  (reward=+30.00 WIN)
+distDelta:  0.14454 avgGoalDelta:  0.08672 INTERIM_REWARD:  0.14689
+distDelta:  0.14983 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29835
+distDelta:  0.15380 avgGoalDelta:  0.14212 INTERIM_REWARD:  0.36847
+distDelta:  0.15758 avgGoalDelta:  0.15140 INTERIM_REWARD:  0.40558
+distDelta:  0.17371 avgGoalDelta:  0.16478 INTERIM_REWARD:  0.45913
+distDelta:  0.18150 avgGoalDelta:  0.17481 INTERIM_REWARD:  0.49925
+distDelta:  0.17966 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51088
+distDelta:  0.09943 avgGoalDelta:  0.13075 INTERIM_REWARD:  0.32299
+distDelta:  0.16352 avgGoalDelta:  0.15041 INTERIM_REWARD:  0.40163
+distDelta:  0.07798 avgGoalDelta:  0.10695 INTERIM_REWARD:  0.22780
+distDelta:  0.04924 avgGoalDelta:  0.07233 INTERIM_REWARD:  0.08930
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9500 (076 of 080)  (reward=+30.00 WIN)
+distDelta:  0.14456 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14694
+distDelta:  0.14982 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29835
+distDelta:  0.15382 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36850
+distDelta:  0.15762 avgGoalDelta:  0.15142 INTERIM_REWARD:  0.40568
+distDelta:  0.17375 avgGoalDelta:  0.16482 INTERIM_REWARD:  0.45927
+distDelta:  0.18151 avgGoalDelta:  0.17483 INTERIM_REWARD:  0.49933
+distDelta:  0.17963 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51085
+distDelta:  0.16984 avgGoalDelta:  0.17299 INTERIM_REWARD:  0.49196
+distDelta:  0.09308 avgGoalDelta:  0.12505 INTERIM_REWARD:  0.30018
+distDelta:  0.07779 avgGoalDelta:  0.09669 INTERIM_REWARD:  0.18678
+distDelta:  0.04916 avgGoalDelta:  0.06818 INTERIM_REWARD:  0.07271
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9506 (077 of 081)  (reward=+30.00 WIN)
+distDelta:  0.14457 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14697
+distDelta:  0.14983 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29839
+distDelta:  0.15381 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36851
+distDelta:  0.15765 avgGoalDelta:  0.15144 INTERIM_REWARD:  0.40577
+distDelta:  0.17380 avgGoalDelta:  0.16486 INTERIM_REWARD:  0.45944
+distDelta:  0.10083 avgGoalDelta:  0.12644 INTERIM_REWARD:  0.30576
+distDelta:  0.18128 avgGoalDelta:  0.15934 INTERIM_REWARD:  0.43737
+distDelta:  0.17872 avgGoalDelta:  0.17097 INTERIM_REWARD:  0.48388
+distDelta:  0.16319 avgGoalDelta:  0.16630 INTERIM_REWARD:  0.46521
+distDelta:  0.07762 avgGoalDelta:  0.11309 INTERIM_REWARD:  0.25236
+distDelta:  0.04909 avgGoalDelta:  0.07469 INTERIM_REWARD:  0.09876
+ARM CONTACT
+Current Accuracy:  0.9512 (078 of 082)  (reward=+30.00 WIN)
+distDelta:  0.14450 avgGoalDelta:  0.08670 INTERIM_REWARD:  0.14681
+distDelta:  0.14981 avgGoalDelta:  0.12456 INTERIM_REWARD:  0.29826
+distDelta:  0.15379 avgGoalDelta:  0.14210 INTERIM_REWARD:  0.36839
+distDelta:  0.15753 avgGoalDelta:  0.15136 INTERIM_REWARD:  0.40543
+distDelta:  0.17361 avgGoalDelta:  0.16471 INTERIM_REWARD:  0.45884
+distDelta:  0.18151 avgGoalDelta:  0.17479 INTERIM_REWARD:  0.49915
+distDelta:  0.17967 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51087
+distDelta:  0.09940 avgGoalDelta:  0.13073 INTERIM_REWARD:  0.32292
+distDelta:  0.16378 avgGoalDelta:  0.15056 INTERIM_REWARD:  0.40223
+distDelta:  0.07836 avgGoalDelta:  0.10724 INTERIM_REWARD:  0.22895
+distDelta:  0.04947 avgGoalDelta:  0.07258 INTERIM_REWARD:  0.09031
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9518 (079 of 083)  (reward=+30.00 WIN)
+distDelta:  0.14452 avgGoalDelta:  0.08671 INTERIM_REWARD:  0.14686
+distDelta:  0.14981 avgGoalDelta:  0.12457 INTERIM_REWARD:  0.29828
+distDelta:  0.15378 avgGoalDelta:  0.14210 INTERIM_REWARD:  0.36839
+distDelta:  0.15757 avgGoalDelta:  0.15138 INTERIM_REWARD:  0.40553
+distDelta: -0.08716 avgGoalDelta:  0.00826 INTERIM_REWARD: -0.16698
+distDelta:  0.16515 avgGoalDelta:  0.10239 INTERIM_REWARD:  0.20956
+distDelta:  0.18030 avgGoalDelta:  0.14914 INTERIM_REWARD:  0.39655
+distDelta:  0.18127 avgGoalDelta:  0.16842 INTERIM_REWARD:  0.47368
+distDelta:  0.17544 avgGoalDelta:  0.17263 INTERIM_REWARD:  0.49052
+distDelta:  0.15318 avgGoalDelta:  0.16096 INTERIM_REWARD:  0.44383
+distDelta:  0.07095 avgGoalDelta:  0.10695 INTERIM_REWARD:  0.22781
+ARM CONTACT
+Current Accuracy:  0.9524 (080 of 084)  (reward=+30.00 WIN)
+distDelta:  0.14465 avgGoalDelta:  0.08679 INTERIM_REWARD:  0.14715
+distDelta:  0.14990 avgGoalDelta:  0.12466 INTERIM_REWARD:  0.29863
+distDelta:  0.15386 avgGoalDelta:  0.14218 INTERIM_REWARD:  0.36871
+distDelta:  0.15776 avgGoalDelta:  0.15153 INTERIM_REWARD:  0.40611
+distDelta:  0.17401 avgGoalDelta:  0.16502 INTERIM_REWARD:  0.46008
+distDelta:  0.18152 avgGoalDelta:  0.17492 INTERIM_REWARD:  0.49967
+distDelta:  0.17955 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51079
+distDelta:  0.09971 avgGoalDelta:  0.13090 INTERIM_REWARD:  0.32361
+distDelta:  0.16258 avgGoalDelta:  0.14991 INTERIM_REWARD:  0.39964
+distDelta:  0.07672 avgGoalDelta:  0.10600 INTERIM_REWARD:  0.22399
+distDelta:  0.04859 avgGoalDelta:  0.07155 INTERIM_REWARD:  0.08622
+ARM CONTACT
+Current Accuracy:  0.9529 (081 of 085)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14701
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29847
+distDelta:  0.15383 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36859
+distDelta:  0.15765 avgGoalDelta:  0.15145 INTERIM_REWARD:  0.40580
+distDelta:  0.17382 avgGoalDelta:  0.16487 INTERIM_REWARD:  0.45948
+distDelta:  0.18151 avgGoalDelta:  0.17486 INTERIM_REWARD:  0.49943
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51084
+distDelta:  0.16971 avgGoalDelta:  0.17291 INTERIM_REWARD:  0.49164
+distDelta:  0.09287 avgGoalDelta:  0.12489 INTERIM_REWARD:  0.29955
+distDelta:  0.07748 avgGoalDelta:  0.09644 INTERIM_REWARD:  0.18578
+distDelta:  0.04893 avgGoalDelta:  0.06794 INTERIM_REWARD:  0.07175
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9535 (082 of 086)  (reward=+30.00 WIN)
+distDelta:  0.14460 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14705
+distDelta:  0.14987 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29850
+distDelta:  0.15384 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36861
+distDelta:  0.15768 avgGoalDelta:  0.15147 INTERIM_REWARD:  0.40588
+distDelta:  0.17386 avgGoalDelta:  0.16490 INTERIM_REWARD:  0.45961
+distDelta:  0.18152 avgGoalDelta:  0.17488 INTERIM_REWARD:  0.49950
+distDelta:  0.17959 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51081
+distDelta:  0.09955 avgGoalDelta:  0.13081 INTERIM_REWARD:  0.32324
+distDelta:  0.16301 avgGoalDelta:  0.15013 INTERIM_REWARD:  0.40052
+distDelta:  0.07730 avgGoalDelta:  0.10643 INTERIM_REWARD:  0.22573
+distDelta:  0.04886 avgGoalDelta:  0.07189 INTERIM_REWARD:  0.08756
+ARM CONTACT
+Current Accuracy:  0.9540 (083 of 087)  (reward=+30.00 WIN)
+distDelta:  0.14462 avgGoalDelta:  0.08677 INTERIM_REWARD:  0.14708
+distDelta:  0.14987 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29852
+distDelta:  0.15384 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36862
+distDelta:  0.15771 avgGoalDelta:  0.15149 INTERIM_REWARD:  0.40595
+distDelta:  0.17393 avgGoalDelta:  0.16495 INTERIM_REWARD:  0.45981
+distDelta:  0.18151 avgGoalDelta:  0.17489 INTERIM_REWARD:  0.49956
+distDelta: -0.00000 avgGoalDelta:  0.06996 INTERIM_REWARD:  0.07982
+distDelta:  0.17957 avgGoalDelta:  0.13572 INTERIM_REWARD:  0.34290
+distDelta:  0.09967 avgGoalDelta:  0.11409 INTERIM_REWARD:  0.25638
+distDelta:  0.16285 avgGoalDelta:  0.14335 INTERIM_REWARD:  0.37340
+distDelta:  0.07712 avgGoalDelta:  0.10361 INTERIM_REWARD:  0.21444
+distDelta:  0.04879 avgGoalDelta:  0.07072 INTERIM_REWARD:  0.08288
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9545 (084 of 088)  (reward=+30.00 WIN)
+distDelta:  0.14463 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14711
+distDelta:  0.14989 avgGoalDelta:  0.12464 INTERIM_REWARD:  0.29857
+distDelta:  0.15384 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36866
+distDelta:  0.15773 avgGoalDelta:  0.15151 INTERIM_REWARD:  0.40603
+distDelta:  0.17397 avgGoalDelta:  0.16499 INTERIM_REWARD:  0.45995
+distDelta:  0.18151 avgGoalDelta:  0.17490 INTERIM_REWARD:  0.49961
+distDelta:  0.17956 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51079
+distDelta:  0.09981 avgGoalDelta:  0.13096 INTERIM_REWARD:  0.32385
+distDelta:  0.16268 avgGoalDelta:  0.14999 INTERIM_REWARD:  0.39998
+distDelta:  0.07693 avgGoalDelta:  0.10616 INTERIM_REWARD:  0.22462
+distDelta:  0.04873 avgGoalDelta:  0.07170 INTERIM_REWARD:  0.08679
+ARM CONTACT
+Current Accuracy:  0.9551 (085 of 089)  (reward=+30.00 WIN)
+distDelta:  0.14457 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14697
+distDelta:  0.14983 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29839
+distDelta:  0.15383 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36854
+distDelta:  0.15762 avgGoalDelta:  0.15143 INTERIM_REWARD:  0.40571
+distDelta:  0.17378 avgGoalDelta:  0.16484 INTERIM_REWARD:  0.45936
+distDelta:  0.18151 avgGoalDelta:  0.17484 INTERIM_REWARD:  0.49937
+distDelta:  0.17963 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51085
+distDelta:  0.16979 avgGoalDelta:  0.17296 INTERIM_REWARD:  0.49184
+distDelta:  0.09300 avgGoalDelta:  0.12498 INTERIM_REWARD:  0.29993
+distDelta:  0.07768 avgGoalDelta:  0.09660 INTERIM_REWARD:  0.18640
+distDelta:  0.04907 avgGoalDelta:  0.06808 INTERIM_REWARD:  0.07234
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9556 (086 of 090)  (reward=+30.00 WIN)
+distDelta:  0.14457 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14698
+distDelta:  0.14986 avgGoalDelta:  0.12461 INTERIM_REWARD:  0.29846
+distDelta:  0.15381 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36854
+distDelta:  0.15767 avgGoalDelta:  0.15145 INTERIM_REWARD:  0.40581
+distDelta:  0.17382 avgGoalDelta:  0.16487 INTERIM_REWARD:  0.45949
+distDelta:  0.18152 avgGoalDelta:  0.17486 INTERIM_REWARD:  0.49944
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51084
+distDelta:  0.16981 avgGoalDelta:  0.17297 INTERIM_REWARD:  0.49187
+distDelta:  0.09295 avgGoalDelta:  0.12496 INTERIM_REWARD:  0.29983
+distDelta:  0.07749 avgGoalDelta:  0.09648 INTERIM_REWARD:  0.18592
+distDelta: -0.07752 avgGoalDelta: -0.00792 INTERIM_REWARD:  0.18592
+distDelta:  0.07752 avgGoalDelta:  0.04334 INTERIM_REWARD: -0.02663
+distDelta:  0.04900 avgGoalDelta:  0.04674 INTERIM_REWARD: -0.01305
+ARM CONTACT
+Current Accuracy:  0.9560 (087 of 091)  (reward=+30.00 WIN)
+distDelta:  0.14460 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14703
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29848
+distDelta:  0.15382 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36856
+distDelta:  0.15768 avgGoalDelta:  0.15146 INTERIM_REWARD:  0.40586
+distDelta:  0.17389 avgGoalDelta:  0.16492 INTERIM_REWARD:  0.45968
+distDelta:  0.18150 avgGoalDelta:  0.17487 INTERIM_REWARD:  0.49948
+distDelta:  0.17960 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51083
+distDelta:  0.16983 avgGoalDelta:  0.17298 INTERIM_REWARD:  0.49191
+distDelta:  0.09290 avgGoalDelta:  0.12493 INTERIM_REWARD:  0.29974
+distDelta:  0.07731 avgGoalDelta:  0.09636 INTERIM_REWARD:  0.18544
+distDelta:  0.04893 avgGoalDelta:  0.06790 INTERIM_REWARD:  0.07160
+ARM CONTACT
+Current Accuracy:  0.9565 (088 of 092)  (reward=+30.00 WIN)
+distDelta: -0.12423 avgGoalDelta: -0.07454 INTERIM_REWARD: 30.00000
+distDelta:  0.12429 avgGoalDelta:  0.04476 INTERIM_REWARD: -0.02097
+distDelta:  0.13519 avgGoalDelta:  0.09902 INTERIM_REWARD:  0.19607
+distDelta:  0.14227 avgGoalDelta:  0.12497 INTERIM_REWARD:  0.29988
+distDelta:  0.14815 avgGoalDelta:  0.13888 INTERIM_REWARD:  0.35552
+distDelta:  0.15275 avgGoalDelta:  0.14720 INTERIM_REWARD:  0.38880
+distDelta:  0.15588 avgGoalDelta:  0.15241 INTERIM_REWARD:  0.40963
+distDelta:  0.16517 avgGoalDelta:  0.16007 INTERIM_REWARD:  0.44027
+distDelta:  0.18032 avgGoalDelta:  0.17222 INTERIM_REWARD:  0.48887
+distDelta:  0.18126 avgGoalDelta:  0.17765 INTERIM_REWARD:  0.51058
+distDelta:  0.17543 avgGoalDelta:  0.17632 INTERIM_REWARD:  0.50527
+distDelta:  0.15311 avgGoalDelta:  0.16240 INTERIM_REWARD:  0.44958
+distDelta:  0.07090 avgGoalDelta:  0.10750 INTERIM_REWARD:  0.22999
+ARM CONTACT
+Current Accuracy:  0.9570 (089 of 093)  (reward=+30.00 WIN)
+distDelta:  0.14466 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14718
+distDelta:  0.14992 avgGoalDelta:  0.12467 INTERIM_REWARD:  0.29867
+distDelta:  0.15387 avgGoalDelta:  0.14219 INTERIM_REWARD:  0.36875
+distDelta:  0.15778 avgGoalDelta:  0.15154 INTERIM_REWARD:  0.40616
+distDelta:  0.17404 avgGoalDelta:  0.16504 INTERIM_REWARD:  0.46016
+distDelta:  0.18152 avgGoalDelta:  0.17493 INTERIM_REWARD:  0.49971
+distDelta:  0.17953 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51077
+distDelta:  0.09964 avgGoalDelta:  0.13086 INTERIM_REWARD:  0.32345
+distDelta:  0.16252 avgGoalDelta:  0.14986 INTERIM_REWARD:  0.39942
+distDelta:  0.07660 avgGoalDelta:  0.10590 INTERIM_REWARD:  0.22361
+distDelta:  0.04851 avgGoalDelta:  0.07147 INTERIM_REWARD:  0.08586
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9574 (090 of 094)  (reward=+30.00 WIN)
+distDelta:  0.14467 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14721
+distDelta:  0.14992 avgGoalDelta:  0.12468 INTERIM_REWARD:  0.29870
+distDelta:  0.15387 avgGoalDelta:  0.14219 INTERIM_REWARD:  0.36877
+distDelta:  0.15780 avgGoalDelta:  0.15156 INTERIM_REWARD:  0.40623
+distDelta: -0.08743 avgGoalDelta:  0.00817 INTERIM_REWARD: -0.16733
+distDelta:  0.16564 avgGoalDelta:  0.10265 INTERIM_REWARD:  0.21061
+distDelta:  0.18048 avgGoalDelta:  0.14935 INTERIM_REWARD:  0.39739
+distDelta:  0.18122 avgGoalDelta:  0.16847 INTERIM_REWARD:  0.47388
+distDelta:  0.17512 avgGoalDelta:  0.17246 INTERIM_REWARD:  0.48985
+distDelta:  0.15222 avgGoalDelta:  0.16032 INTERIM_REWARD:  0.44126
+distDelta:  0.06811 avgGoalDelta:  0.10499 INTERIM_REWARD:  0.21996
+ARM CONTACT
+Current Accuracy:  0.9579 (091 of 095)  (reward=+30.00 WIN)
+distDelta:  0.14450 avgGoalDelta:  0.08670 INTERIM_REWARD:  0.14680
+distDelta:  0.14980 avgGoalDelta:  0.12456 INTERIM_REWARD:  0.29823
+distDelta:  0.15379 avgGoalDelta:  0.14210 INTERIM_REWARD:  0.36838
+distDelta:  0.15754 avgGoalDelta:  0.15136 INTERIM_REWARD:  0.40546
+distDelta:  0.17358 avgGoalDelta:  0.16469 INTERIM_REWARD:  0.45878
+distDelta:  0.18152 avgGoalDelta:  0.17479 INTERIM_REWARD:  0.49915
+distDelta:  0.17968 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51090
+distDelta:  0.09934 avgGoalDelta:  0.13070 INTERIM_REWARD:  0.32278
+distDelta:  0.16381 avgGoalDelta:  0.15056 INTERIM_REWARD:  0.40226
+distDelta:  0.07839 avgGoalDelta:  0.10726 INTERIM_REWARD:  0.22903
+distDelta:  0.04948 avgGoalDelta:  0.07259 INTERIM_REWARD:  0.09036
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9583 (092 of 096)  (reward=+30.00 WIN)
+distDelta:  0.14452 avgGoalDelta:  0.08671 INTERIM_REWARD:  0.14685
+distDelta:  0.14981 avgGoalDelta:  0.12457 INTERIM_REWARD:  0.29828
+distDelta: -0.08441 avgGoalDelta: -0.00082 INTERIM_REWARD:  0.29828
+distDelta:  0.15273 avgGoalDelta:  0.09131 INTERIM_REWARD:  0.16526
+distDelta:  0.15588 avgGoalDelta:  0.13005 INTERIM_REWARD:  0.32020
+distDelta:  0.16515 avgGoalDelta:  0.15111 INTERIM_REWARD:  0.40444
+distDelta:  0.18029 avgGoalDelta:  0.16862 INTERIM_REWARD:  0.47448
+distDelta:  0.18128 avgGoalDelta:  0.17621 INTERIM_REWARD:  0.50486
+distDelta:  0.17545 avgGoalDelta:  0.17575 INTERIM_REWARD:  0.50301
+distDelta:  0.15319 avgGoalDelta:  0.16222 INTERIM_REWARD:  0.44887
+distDelta:  0.07107 avgGoalDelta:  0.10753 INTERIM_REWARD:  0.23013
+ARM CONTACT
+Current Accuracy:  0.9588 (093 of 097)  (reward=+30.00 WIN)
+distDelta:  0.14465 avgGoalDelta:  0.08679 INTERIM_REWARD:  0.14715
+distDelta:  0.14990 avgGoalDelta:  0.12466 INTERIM_REWARD:  0.29863
+distDelta:  0.15385 avgGoalDelta:  0.14217 INTERIM_REWARD:  0.36869
+distDelta:  0.15776 avgGoalDelta:  0.15152 INTERIM_REWARD:  0.40609
+distDelta:  0.17401 avgGoalDelta:  0.16502 INTERIM_REWARD:  0.46007
+distDelta:  0.18152 avgGoalDelta:  0.17492 INTERIM_REWARD:  0.49967
+distDelta:  0.17955 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51079
+distDelta:  0.16966 avgGoalDelta:  0.17287 INTERIM_REWARD:  0.49149
+distDelta:  0.09262 avgGoalDelta:  0.12472 INTERIM_REWARD:  0.29888
+distDelta:  0.07675 avgGoalDelta:  0.09594 INTERIM_REWARD:  0.18375
+distDelta:  0.04859 avgGoalDelta:  0.06753 INTERIM_REWARD:  0.07013
+ARM CONTACT
+Current Accuracy:  0.9592 (094 of 098)  (reward=+30.00 WIN)
+distDelta:  0.14466 avgGoalDelta:  0.08680 INTERIM_REWARD:  0.14718
+distDelta:  0.14991 avgGoalDelta:  0.12467 INTERIM_REWARD:  0.29866
+distDelta:  0.15386 avgGoalDelta:  0.14218 INTERIM_REWARD:  0.36873
+distDelta:  0.15778 avgGoalDelta:  0.15154 INTERIM_REWARD:  0.40618
+distDelta:  0.17405 avgGoalDelta:  0.16505 INTERIM_REWARD:  0.46018
+distDelta:  0.18153 avgGoalDelta:  0.17493 INTERIM_REWARD:  0.49973
+distDelta:  0.17954 avgGoalDelta:  0.17769 INTERIM_REWARD:  0.51078
+distDelta:  0.16967 avgGoalDelta:  0.17288 INTERIM_REWARD:  0.49153
+distDelta:  0.09257 avgGoalDelta:  0.12469 INTERIM_REWARD:  0.29878
+distDelta:  0.07656 avgGoalDelta:  0.09581 INTERIM_REWARD:  0.18326
+distDelta:  0.04853 avgGoalDelta:  0.06745 INTERIM_REWARD:  0.06978
+ARM CONTACT
+Current Accuracy:  0.9596 (095 of 099)  (reward=+30.00 WIN)
+distDelta:  0.14459 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14702
+distDelta:  0.14988 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29851
+distDelta:  0.15384 avgGoalDelta:  0.14215 INTERIM_REWARD:  0.36861
+distDelta:  0.15767 avgGoalDelta:  0.15146 INTERIM_REWARD:  0.40585
+distDelta:  0.17387 avgGoalDelta:  0.16490 INTERIM_REWARD:  0.45962
+distDelta:  0.18151 avgGoalDelta:  0.17487 INTERIM_REWARD:  0.49946
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51085
+distDelta:  0.16970 avgGoalDelta:  0.17291 INTERIM_REWARD:  0.49163
+distDelta:  0.09284 avgGoalDelta:  0.12486 INTERIM_REWARD:  0.29946
+distDelta:  0.07732 avgGoalDelta:  0.09634 INTERIM_REWARD:  0.18536
+distDelta:  0.04887 avgGoalDelta:  0.06786 INTERIM_REWARD:  0.07142
+ARM CONTACT
+Current Accuracy:  0.9600 (096 of 100)  (reward=+30.00 WIN)
+distDelta:  0.14460 avgGoalDelta:  0.08676 INTERIM_REWARD:  0.14705
+distDelta:  0.14988 avgGoalDelta:  0.12463 INTERIM_REWARD:  0.29853
+distDelta:  0.15385 avgGoalDelta:  0.14216 INTERIM_REWARD:  0.36865
+distDelta:  0.15769 avgGoalDelta:  0.15148 INTERIM_REWARD:  0.40593
+distDelta:  0.17392 avgGoalDelta:  0.16494 INTERIM_REWARD:  0.45978
+distDelta:  0.18151 avgGoalDelta:  0.17489 INTERIM_REWARD:  0.49955
+distDelta:  0.17958 avgGoalDelta:  0.17770 INTERIM_REWARD:  0.51082
+distDelta:  0.16972 avgGoalDelta:  0.17291 INTERIM_REWARD:  0.49166
+distDelta:  0.09279 avgGoalDelta:  0.12484 INTERIM_REWARD:  0.29936
+distDelta:  0.07714 avgGoalDelta:  0.09622 INTERIM_REWARD:  0.18488
+distDelta:  0.04879 avgGoalDelta:  0.06776 INTERIM_REWARD:  0.07106
+ARM CONTACT
+Current Accuracy:  0.9604 (097 of 101)  (reward=+30.00 WIN)
+distDelta:  0.14463 avgGoalDelta:  0.08678 INTERIM_REWARD:  0.14711
+distDelta:  0.14988 avgGoalDelta:  0.12464 INTERIM_REWARD:  0.29855
+distDelta: -0.14987 avgGoalDelta: -0.04007 INTERIM_REWARD:  0.29855
+distDelta:  0.14988 avgGoalDelta:  0.07390 INTERIM_REWARD:  0.09560
+distDelta:  0.15384 avgGoalDelta:  0.12186 INTERIM_REWARD:  0.28745
+distDelta:  0.15773 avgGoalDelta:  0.14338 INTERIM_REWARD:  0.37353
+distDelta:  0.17396 avgGoalDelta:  0.16173 INTERIM_REWARD:  0.44692
+distDelta:  0.18152 avgGoalDelta:  0.17361 INTERIM_REWARD:  0.49442
+distDelta:  0.17957 avgGoalDelta:  0.17718 INTERIM_REWARD:  0.50873
+distDelta:  0.00000 avgGoalDelta:  0.07087 INTERIM_REWARD:  0.08349
+distDelta:  0.16974 avgGoalDelta:  0.13020 INTERIM_REWARD:  0.32078
+distDelta:  0.09273 avgGoalDelta:  0.10772 INTERIM_REWARD:  0.23087
+distDelta:  0.07696 avgGoalDelta:  0.08926 INTERIM_REWARD:  0.15704
+distDelta:  0.04873 avgGoalDelta:  0.06494 INTERIM_REWARD:  0.05976
+ARM CONTACT
+Current Accuracy:  0.9608 (098 of 102)  (reward=+30.00 WIN)
+distDelta:  0.14457 avgGoalDelta:  0.08674 INTERIM_REWARD:  0.14696
+distDelta:  0.14984 avgGoalDelta:  0.12460 INTERIM_REWARD:  0.29841
+distDelta:  0.15381 avgGoalDelta:  0.14213 INTERIM_REWARD:  0.36851
+distDelta:  0.15763 avgGoalDelta:  0.15143 INTERIM_REWARD:  0.40572
+distDelta:  0.17375 avgGoalDelta:  0.16482 INTERIM_REWARD:  0.45930
+distDelta:  0.18152 avgGoalDelta:  0.17484 INTERIM_REWARD:  0.49937
+distDelta:  0.17962 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51084
+distDelta:  0.16978 avgGoalDelta:  0.17295 INTERIM_REWARD:  0.49181
+distDelta:  0.09300 avgGoalDelta:  0.12498 INTERIM_REWARD:  0.29992
+distDelta:  0.07771 avgGoalDelta:  0.09662 INTERIM_REWARD:  0.18647
+distDelta:  0.04908 avgGoalDelta:  0.06809 INTERIM_REWARD:  0.07238
+ARM CONTACT
+ARM CONTACT
+Current Accuracy:  0.9612 (099 of 103)  (reward=+30.00 WIN)
+distDelta:  0.14458 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14699
+distDelta:  0.14985 avgGoalDelta:  0.12461 INTERIM_REWARD:  0.29844
+distDelta:  0.15382 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36855
+distDelta:  0.15765 avgGoalDelta:  0.15145 INTERIM_REWARD:  0.40579
+distDelta:  0.17382 avgGoalDelta:  0.16487 INTERIM_REWARD:  0.45947
+distDelta:  0.18151 avgGoalDelta:  0.17485 INTERIM_REWARD:  0.49942
+distDelta:  0.17961 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51083
+distDelta:  0.16979 avgGoalDelta:  0.17295 INTERIM_REWARD:  0.49182
+distDelta:  0.09296 avgGoalDelta:  0.12496 INTERIM_REWARD:  0.29982
+distDelta:  0.07753 avgGoalDelta:  0.09650 INTERIM_REWARD:  0.18599
+distDelta:  0.04900 avgGoalDelta:  0.06800 INTERIM_REWARD:  0.07201
+ARM CONTACT
+Current Accuracy:  0.9615 (100 of 104)  (reward=+30.00 WIN)
+distDelta:  0.14458 avgGoalDelta:  0.08675 INTERIM_REWARD:  0.14700
+distDelta:  0.14986 avgGoalDelta:  0.12462 INTERIM_REWARD:  0.29847
+distDelta:  0.15383 avgGoalDelta:  0.14214 INTERIM_REWARD:  0.36857
+distDelta:  0.15769 avgGoalDelta:  0.15147 INTERIM_REWARD:  0.40588
+distDelta:  0.17386 avgGoalDelta:  0.16490 INTERIM_REWARD:  0.45961
+distDelta:  0.18152 avgGoalDelta:  0.17487 INTERIM_REWARD:  0.49949
+distDelta:  0.17959 avgGoalDelta:  0.17771 INTERIM_REWARD:  0.51083
+distDelta:  0.16980 avgGoalDelta:  0.17296 INTERIM_REWARD:  0.49186
+distDelta:  0.09291 avgGoalDelta:  0.12493 INTERIM_REWARD:  0.29973
+distDelta:  0.07734 avgGoalDelta:  0.09638 INTERIM_REWARD:  0.18551
+distDelta:  0.04893 avgGoalDelta:  0.06791 INTERIM_REWARD:  0.07164
+ARM CONTACT
+Current Accuracy:  0.9619 (101 of 105)  (reward=+30.00 WIN)
+distDelta:  0.14454 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14691
+distDelta:  0.14981 avgGoalDelta:  0.12458 INTERIM_REWARD:  0.29830
+distDelta:  0.15380 avgGoalDelta:  0.14211 INTERIM_REWARD:  0.36844
+distDelta:  0.15757 avgGoalDelta:  0.15139 INTERIM_REWARD:  0.40555
+distDelta:  0.17366 avgGoalDelta:  0.16475 INTERIM_REWARD:  0.45900
+distDelta:  0.18152 avgGoalDelta:  0.17481 INTERIM_REWARD:  0.49924
+distDelta:  0.17966 avgGoalDelta:  0.17772 INTERIM_REWARD:  0.51088
+distDelta:  0.16984 avgGoalDelta:  0.17299 INTERIM_REWARD:  0.49196
+distDelta:  0.09316 avgGoalDelta:  0.12509 INTERIM_REWARD:  0.30037
+distDelta:  0.07809 avgGoalDelta:  0.09689 INTERIM_REWARD:  0.18756
+distDelta:  0.04930 avgGoalDelta:  0.06834 INTERIM_REWARD:  0.07335
+ARM CONTACT
+Current Accuracy:  0.9623 (102 of 106)  (reward=+30.00 WIN)
+distDelta:  0.14455 avgGoalDelta:  0.08673 INTERIM_REWARD:  0.14692
+distDelta:  0.14982 avgGoalDelta:  0.12459 INTERIM_REWARD:  0.29835

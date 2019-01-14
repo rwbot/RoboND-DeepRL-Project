@@ -14,6 +14,7 @@ alias cdcbz="cd /home/workspace/RoboND-DeepRL-Project/build/x86_64/bin"
 alias cdcmk="cdcb; make" #goes to catkin_ws, runs catkin_make, waits until it's made, then sources devel/setup.bash
 alias rr="cdcbz; ./gazebo-arm.sh"
 alias rro="cdcbz; ./gazebo-arm.sh | tee /home/workspace/RoboND-DeepRL-Project/output.txt"
+alias rrd="cdcbz; ./gazebo-arm.sh | tee /home/workspace/RoboND-DeepRL-Project/$(date +%a%R).txt"
 
 alias gcm="cdc; git checkout master"
 alias gcw="cdc; git checkout workspaces"
