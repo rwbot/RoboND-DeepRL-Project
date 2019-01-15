@@ -38,7 +38,7 @@
 #define OPTIMIZER "Adam"
 #define LEARNING_RATE 0.05f
 #define REPLAY_MEMORY 10000
-#define BATCH_SIZE 128
+#define BATCH_SIZE 32
 #define USE_LSTM true
 #define LSTM_SIZE 128
 
