@@ -20,36 +20,33 @@
 #define VELOCITY_MIN -0.2f
 #define VELOCITY_MAX  0.2f
 
+// Define whether ARM / GRIPPER only is considered a win
+#define GRIP_ONLY 0
 // Define DQN API Settings
 #define INPUT_CHANNELS 3
 #define ALLOW_RANDOM true
 #define DEBUG_DQN false
 #define GAMMA 0.9f
-#define EPS_START 0.8f
-#define EPS_END 0.02f
+#define EPS_START 0.9f
+#define EPS_END 0.01f
 #define EPS_DECAY 200
 
-/*
-/ TODO - Tune the following hyperparameters
-*/
-
+// TODO - Tune the following hyperparameters
 #define INPUT_WIDTH   64
 #define INPUT_HEIGHT  64
-#define OPTIMIZER "Adam"
-#define LEARNING_RATE 0.05f
+#define OPTIMIZER "RMSprop"
+#define LEARNING_RATE 0.1f
 #define REPLAY_MEMORY 10000
-#define BATCH_SIZE 32
+#define BATCH_SIZE 64	//93%
 #define USE_LSTM true
-#define LSTM_SIZE 128
+#define LSTM_SIZE 256
 
-/*
-/ TODO - Define Reward Parameters
-*/
+// TODO - Define Reward Parameters
 #define REWARD_WIN  30.0f
 #define REWARD_LOSS -30.0f
 #define REWARD_INTERIM 5.0f
-#define TIME_PENALTY 0.3f
-#define ALPHA 0.4f
+#define TIME_PENALTY 0.4f
+#define ALPHA 0.6f
 // Define Object Names
 #define WORLD_NAME "arm_world"
 #define PROP_NAME  "tube"
@@ -279,8 +276,9 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 
 		if (collisionItemCheck)
 		{
-			// Reward for any part of arm touching the object
-			rewardHistory = REWARD_WIN;
+			// Reward for any part of arm given only when GRIP_ONLY == 0
+			rewardHistory = GRIP_ONLY ? REWARD_LOSS : REWARD_WIN;
+			// rewardHistory = REWARD_WIN;
             bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
             // rewardHistory += collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
 			if (collisionPointCheck)
@@ -617,20 +615,21 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		{
 			const float distGoal = BoxDistance(gripBBox,propBBox); // compute the reward from distance to the goal
 
-			if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
+			// if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
+			if(DEBUG){printf("distance('%s', '%s') = %f ", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
 
 			if( episodeFrames > 1 )
 			{
 				const float distDelta  = lastGoalDistance - distGoal;
 				// compute the smoothed moving average of the delta of the distance to the goal
 				avgGoalDelta  = (avgGoalDelta * ALPHA) + (distDelta * (1.0f - ALPHA));
-                if(DEBUG){printf("distDelta: %8.5f avgGoalDelta: %8.5f ", distDelta, avgGoalDelta);}
-                if(avgGoalDelta > 0){
+                if(DEBUG){printf("distDelta: %7.5f avgGoalDelta: %7.5f ", distDelta, avgGoalDelta);}
+                // if(avgGoalDelta > 0){
 				// rewardHistory = REWARD_INTERIM * (1.0f - avgGoalDelta);
 				rewardHistory = REWARD_INTERIM * avgGoalDelta - TIME_PENALTY;
-                } else {
-                rewardHistory = -1.0f * REWARD_LOSS * avgGoalDelta;
-                }
+                // } else {
+                // rewardHistory = -1.0f * REWARD_LOSS * avgGoalDelta;
+                // }
 				newReward     = true;
                 if(DEBUG){printf("INTERIM_REWARD: %8.5f\n", rewardHistory);}
 //#############################################################################
