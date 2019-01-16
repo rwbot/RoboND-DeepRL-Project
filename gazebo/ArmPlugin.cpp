@@ -20,7 +20,7 @@
 #define VELOCITY_MIN -0.2f
 #define VELOCITY_MAX  0.2f
 
-// Define whether ARM / GRIPPER only is considered a win
+// Define whether ARM or GRIPPER only is considered a win
 #define GRIP_ONLY 0
 // Define DQN API Settings
 #define INPUT_CHANNELS 3
@@ -272,29 +272,29 @@ void ArmPlugin::onCollisionMsg(ConstContactsPtr &contacts)
 		/*
 		/ TODO - Check if there is collision between the arm and object, then issue learning reward
 		*/
-        bool collisionItemCheck = ( strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0 );
+bool collisionItemCheck = ( strcmp(contacts->contact(i).collision1().c_str(), COLLISION_ITEM) == 0 );
 
-		if (collisionItemCheck)
-		{
-			// Reward for any part of arm given only when GRIP_ONLY == 0
-			rewardHistory = GRIP_ONLY ? REWARD_LOSS : REWARD_WIN;
-			// rewardHistory = REWARD_WIN;
-            bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
-            // rewardHistory += collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
-			if (collisionPointCheck)
-			{
-				rewardHistory = rewardHistory * 5.0f;
-				if(DEBUG){printf("+ GRIPPER CONTACT\n");}
-				// printf("+ GRIPPER CONTACT\n");
-			} else {
-				if(DEBUG){printf("ARM CONTACT\n");}
-				// printf("ARM CONTACT ");
-			}
+if (collisionItemCheck)
+{
+	// Reward for any part of arm given only when GRIP_ONLY == 0
+	rewardHistory = GRIP_ONLY ? REWARD_LOSS : REWARD_WIN;
+	// rewardHistory = REWARD_WIN;
+    bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
+    // rewardHistory += collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
+	if (collisionPointCheck)
+	{
+		rewardHistory = rewardHistory * 5.0f;
+		if(DEBUG){printf("+ GRIPPER CONTACT\n");}
+		// printf("+ GRIPPER CONTACT\n");
+	} else {
+		if(DEBUG){printf("ARM CONTACT\n");}
+		// printf("ARM CONTACT ");
+	}
 
-			newReward  = true;
-			endEpisode = true;
-			return;
-		}
+	newReward  = true;
+	endEpisode = true;
+	return;
+}
 
 //#############################################################################
 	}
@@ -598,7 +598,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		/*
 		/ TODO - set appropriate Reward for robot hitting the ground.
 		*/
-        const bool checkGroundContact = (gripBBox.min.z <= groundContact);
+        const bool checkGroundContact = (gripBBox.min.z <= groundContact || gripBBox.max.z <= groundContact);
 
 		if(checkGroundContact)
 		{
