@@ -20,7 +20,7 @@
 #define VELOCITY_MAX  0.2f
 
 // Set Debug Mode
-#define DEBUG true
+#define DEBUG false
 // Define whether ARM or GRIPPER only is considered a win
 #define GRIP_ONLY 1
 // Define DQN API Settings
