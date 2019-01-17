@@ -28,7 +28,7 @@
 #define DEBUG_DQN false
 #define GAMMA 0.9f
 #define EPS_START 0.9f
-#define EPS_END 0.01f
+#define EPS_END 0.0f
 #define EPS_DECAY 200
 
 // TODO - Tune the following hyperparameters
@@ -61,7 +61,7 @@
 #define ANIMATION_STEPS 1000
 
 // Set Debug Mode
-#define DEBUG true
+#define DEBUG false
 
 // Lock base rotation DOF (Add dof in header file if off)
 #define LOCKBASE true
@@ -284,10 +284,10 @@ if (collisionItemCheck)
 	if (collisionPointCheck)
 	{
 		rewardHistory = rewardHistory * 5.0f;
-		if(DEBUG){printf("+ GRIPPER CONTACT\n");}
+		if(DEBUG){printf("+ GRIPPER CONTACT ");}
 		// printf("+ GRIPPER CONTACT\n");
 	} else {
-		if(DEBUG){printf("ARM CONTACT\n");}
+		if(DEBUG){printf("ARM CONTACT ");}
 		// printf("ARM CONTACT ");
 	}
 
@@ -603,7 +603,7 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		if(checkGroundContact)
 		{
 			if(DEBUG){printf("GROUND CONTACT, EOE\n");}
-			rewardHistory = REWARD_LOSS;
+			rewardHistory = REWARD_LOSS*REWARD_LOSS*REWARD_LOSS;
 			newReward     = true;
 			endEpisode    = true;
 		}
@@ -615,7 +615,6 @@ void ArmPlugin::OnUpdate(const common::UpdateInfo& updateInfo)
 		{
 			const float distGoal = BoxDistance(gripBBox,propBBox); // compute the reward from distance to the goal
 
-			// if(DEBUG){printf("distance('%s', '%s') = %f\n", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
 			if(DEBUG){printf("distance('%s', '%s') = %f ", gripper->GetName().c_str(), prop->model->GetName().c_str(), distGoal);}
 
 			if( episodeFrames > 1 )
