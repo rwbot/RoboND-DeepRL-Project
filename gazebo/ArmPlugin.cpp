@@ -14,14 +14,15 @@
 
 #define JOINT_MIN	-0.75f
 #define JOINT_MAX	 2.0f
-
 // Turn on velocity based control
 #define VELOCITY_CONTROL false
 #define VELOCITY_MIN -0.2f
 #define VELOCITY_MAX  0.2f
 
+// Set Debug Mode
+#define DEBUG true
 // Define whether ARM or GRIPPER only is considered a win
-#define GRIP_ONLY 0
+#define GRIP_ONLY 1
 // Define DQN API Settings
 #define INPUT_CHANNELS 3
 #define ALLOW_RANDOM true
@@ -29,15 +30,15 @@
 #define GAMMA 0.9f
 #define EPS_START 0.9f
 #define EPS_END 0.0f
-#define EPS_DECAY 200
+#define EPS_DECAY 250
 
 // TODO - Tune the following hyperparameters
 #define INPUT_WIDTH   64
 #define INPUT_HEIGHT  64
 #define OPTIMIZER "RMSprop"
-#define LEARNING_RATE 0.1f
+#define LEARNING_RATE 0.9f
 #define REPLAY_MEMORY 10000
-#define BATCH_SIZE 64	//93%
+#define BATCH_SIZE 128	//93%
 #define USE_LSTM true
 #define LSTM_SIZE 256
 
@@ -59,9 +60,6 @@
 
 // Animation Steps
 #define ANIMATION_STEPS 1000
-
-// Set Debug Mode
-#define DEBUG false
 
 // Lock base rotation DOF (Add dof in header file if off)
 #define LOCKBASE true
@@ -277,13 +275,13 @@ bool collisionItemCheck = ( strcmp(contacts->contact(i).collision1().c_str(), CO
 if (collisionItemCheck)
 {
 	// Reward for any part of arm given only when GRIP_ONLY == 0
-	rewardHistory = GRIP_ONLY ? REWARD_LOSS : REWARD_WIN;
+	rewardHistory = GRIP_ONLY ? REWARD_LOSS*REWARD_LOSS*REWARD_LOSS : REWARD_WIN;
 	// rewardHistory = REWARD_WIN;
     bool collisionPointCheck = ( strcmp(contacts->contact(i).collision2().c_str(), COLLISION_POINT) == 0 );
     // rewardHistory += collisionPointCheck ? REWARD_WIN : REWARD_LOSS ;
 	if (collisionPointCheck)
 	{
-		rewardHistory = rewardHistory * 5.0f;
+		rewardHistory = REWARD_WIN * REWARD_WIN;
 		if(DEBUG){printf("+ GRIPPER CONTACT ");}
 		// printf("+ GRIPPER CONTACT\n");
 	} else {
