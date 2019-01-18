@@ -1,3 +1,4 @@
+### DeepRL Project Writeup [Markdown](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.md)  or  [PDF](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.pdf)
 
 # Deep RL Arm Manipulation
 
@@ -31,7 +32,7 @@ To test the textual [`catch`](samples/catch/catch.cpp) sample, run the following
 
 ``` bash
 $ cd RoboND-DeepRL-Project/build/aarch64/bin
-$ ./catch 
+$ ./catch
 [deepRL]  input_width:    64
 [deepRL]  input_height:   64
 [deepRL]  input_channels: 1
