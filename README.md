@@ -1,6 +1,6 @@
-### DeepRL Project Writeup [Markdown](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.md)  or  [PDF](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.pdf)
+## RoboND DeepRL Project Writeup: [Markdown](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.md)  or  [PDF](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.pdf)
 
-# Deep RL Arm Manipulation
+# Deep Reinforcement Learning Arm Manipulation
 
 This project is based on the Nvidia open source project "jetson-reinforcement" developed by [Dustin Franklin](https://github.com/dusty-nv). The goal of the project is to create a DQN agent and define reward functions to teach a robotic arm to carry out two primary objectives:
 

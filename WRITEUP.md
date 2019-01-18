@@ -140,10 +140,10 @@ The DQN was able to successfully complete both objectives. Objective 1 parameter
 
 
 * Objective 1 - 91% at 100th episode
-![Objective 1: 91% at 100th episode](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/media/arm_91%25100_wm%28convert-video-online.com%29.gif?raw=true)
+![Objective 1: 91% at 100th episode](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/media/arm_91%25100_wm.gif?raw=true)
 
 * Objective 2: 81% at 100th episode
-![Objective 2: 81% at 100th episode](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/media/grip_81%25100_wm%28convert-video-online.com%29.gif?raw=true)
+![Objective 2: 81% at 100th episode](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/media/grip_81%25100_wm.gif?raw=true)
 
 
 ## Future Work
