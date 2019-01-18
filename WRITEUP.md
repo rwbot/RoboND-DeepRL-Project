@@ -3,7 +3,7 @@
 # Deep Reinforcement Learning - Arm Manipulation
 
 ## Setup
-In the method `ArmPlugin::Load()`, subscriber nodes were defined to faciliate camera communication and collision detection through Gazebo:
+In the method `ArmPlugin::Load()`, subscriber nodes were defined to facilitate camera communication and collision detection through Gazebo:
 ```cpp
 // Camera subscriber
 cameraSub = cameraNode->Subscribe("/gazebo/arm_world/camera/link/camera/image",&ArmPlugin::onCameraMsg, this);
@@ -18,7 +18,7 @@ agent = dqnAgent::Create(INPUT_WIDTH, INPUT_HEIGHT, INPUT_CHANNELS,
     EPS_START, EPS_END, EPS_DECAY, USE_LSTM, LSTM_SIZE, ALLOW_RANDOM, DEBUG_DQN);
 ```
 
-The output of the DQN agent is mapped to a particular actions of the robotic arm. The method `ArmPlugin::updateAgent()` is responsible for executing the action selected by the DQN agent. Two types of joint control were implemented: velocity control and position control. Both are dependent upon whether the issued action is an odd or even number.  Odd-numbered actions decrease the joint position/velocity, while even-numbered actions increase the joint position/velocity. Additionally, the current delta of the position/values is used:
+The output of the DQN agent is mapped to particular actions of the robotic arm. The method `ArmPlugin::updateAgent()` is responsible for executing the action selected by the DQN agent. Two types of joint control were implemented: velocity control and position control. Both are dependent upon whether the issued action is an odd or even number.  Odd-numbered actions decrease the joint position/velocity, while even-numbered actions increase the joint position/velocity. Additionally, the current delta of the position/values is used:
 ```cpp
 // Evaluating if action is even or odd
 const int actionSign = 1 - 2 * (action % 2);
@@ -33,9 +33,9 @@ const float velocity = vel[action/2] + actionSign * actionVelDelta;
 
 The reward function is a crucial component in guiding the DQN agent through the process of learning to manipulate the arm. After every end of episode (EOE), a particular reward is issued, depending on the triggering event.
 
-#### `REWARD_LOSS` is issued when the current episode exceeds 100 steps or when the arm makes contact with the ground.
+#### `REWARD_LOSS` is issued when the current episode exceeds 100 steps or when the arm contacts the ground.
 
-The `REWARD_LOSS` issued when the arm makes contact with the ground is detected using the `GetBoundingBox()` function from the Gazebo API which provides the min/max XYZ values of the arm. Comparing this with the Z value of the ground, collisions can be detected.
+The `REWARD_LOSS` issued when the arm contacts the ground is detected using the `GetBoundingBox()` function from the Gazebo API which provides the min/max XYZ values of the arm. Comparing this with the Z value of the ground, collisions can be detected.
 ```cpp
 const bool checkGroundContact = (gripBBox.min.z <= groundContact || gripBBox.max.z <= groundContact);
 
@@ -45,7 +45,7 @@ if(checkGroundContact){
 }
 ```
 
-#### `REWARD_WIN` is issued when any part of the arm makes contact with the object (Objective 1) and when only the gripper makes contact with the object (Objective 2).
+#### `REWARD_WIN` is issued when any part of the arm contacts the object (Objective 1) and when only the gripper contacts the object (Objective 2).
 The reward function for arm and object collision first checks for a collision between any part of the arm and the object. Depending on which objective was being attempted, the boolean `GRIP_ONLY` controls whether the arm-object collision is a win or loss.
 
 If `GRIP_ONLY == 0`, the rules of Objective 1 are applied, and the arm-object collision is considered a win. Additionally, if that part happens to be the gripper, the reward is multiplied.
@@ -95,7 +95,7 @@ Below are all the relevant parameters used. Between both objectives, only 3 para
 
 In Q-Learning, epsilon-Greedy is a typical exploration method used to encourage an agent to explore more of the state-action space. The larger the value, the more frequently a random action is chosen instead of one with the highest q-value.
 `EPS_START` defines the initial value.  **0.9f** ensures the agent is exposed to many state-action spaces.
-`EPS_END` defines the final value. **0.0f** ensures that only learned actions with the highest q-value is used once it has been adequately exposed.
+`EPS_END` defines the final value. **0.0f** ensures that only learned actions with the highest q-value is used once it has been sufficiently exposed.
 `EPS_DECAY` defines the rate by which the value decays from initial to final over time. For objective 2, this was increased to **250**. Touching the gripper to the object was less likely to happen than the whole arm. Preferably, the agent needed enough exploration to encounter that situation, but not too much that the agent falls into a "best loss" policy.
 ```cpp
 // DQN API Settings
@@ -135,7 +135,7 @@ The input dimensions were set to match that of the image captured by the camera:
 <!--- Explain the results obtained for both objectives. Include discussion on the DQN agent's performance for both objectives. Include watermarked images, or videos of your results.
 Student should describe and briefly explain the results they achieved for both objectives. The discussion should also include their comments on the DQN agent's performance and if there were any shortcomings. Student should include either watermarked images of their results, or attach a video that displays the results and the arm in action. -->
 
-The DQN was able to successfully complete both objectives. Objective 1 parameters were consistent in results of 90% in a range from 100 to 120 episodes. Objective 2 parameters were less consistent. The initial episodes greatly influenced the convergence time. On less ideal runs, it would take the agent 40 episodes before receiving a single win. On more ideal runs, the agent would receive a win within the first 15 episodes. This puts the results of  80% in a range from 100 to 300 episodes.
+The DQN was able to successfully complete both objectives. Objective 1 parameters were consistent in results of 90% within the range of 100 to 120 episodes. Objective 2 parameters were less consistent. The initial episodes significantly influenced the convergence time. On less ideal runs, it would take the agent 40 episodes before receiving a single win. On more ideal runs, the agent would receive a win within the first 15 episodes. This puts the result of 80% consistent within the range of 100 to 300 episodes.
 
 
 
@@ -149,4 +149,4 @@ The DQN was able to successfully complete both objectives. Objective 1 parameter
 ## Future Work
 <!--- Briefly discuss how you can improve your current results. Student should discuss on what approaches they could take to improve their results. <!--- -->
 
-Given more GPU time, the performance of the DQN agent could be improved by employing a more extensive approach to tuning. Each set of parameters could be run multiple times to decrease the effect of varying initial episodes.
+With enough GPU time, the performance of the DQN agent could be improved by employing a more extensive approach to tuning. Each set of parameters could be run multiple times to decrease the effect of varying initial episodes.
