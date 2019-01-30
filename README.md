@@ -1,4 +1,6 @@
-## RoboND DeepRL Project Writeup: [Markdown](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.md)  or  [PDF](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.pdf)
+[![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
+
+#### RoboND DeepRL Project Writeup: [Markdown](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.md)  or  [PDF](https://github.com/rwbot/RoboND-DeepRL-Project/blob/master/WRITEUP.pdf)
 
 # Deep Reinforcement Learning Arm Manipulation
 
